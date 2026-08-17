@@ -1,0 +1,880 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edgardo Fajardo · Portafolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome 6 (gratuito) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* ---------- RESET & BASE ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f4f7fc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+            padding-top: 70px;
+            /* espacio para header fijo */;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---------- HEADER ---------- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #0b1a2e;
+            color: #fff;
+            padding: 0 24px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: -0.5px;
+        }
+
+            .logo span {
+                color: #7aa9e0;
+            }
+        /* navegación escritorio */
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-weight: 500;
+        }
+
+            .nav-links a {
+                transition: color 0.2s;
+                font-size: 0.95rem;
+            }
+
+                .nav-links a:hover {
+                    color: #7aa9e0;
+                }
+        /* menú hamburguesa */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px;
+        }
+
+            .hamburger span {
+                display: block;
+                width: 26px;
+                height: 3px;
+                background: #fff;
+                border-radius: 4px;
+                transition: 0.3s;
+            }
+        /* dropdown móvil */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 70px;
+            right: 0;
+            background: #0b1a2e;
+            width: 200px;
+            padding: 16px 20px;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            flex-direction: column;
+            gap: 14px;
+        }
+
+            .dropdown-menu.open {
+                display: flex;
+            }
+
+            .dropdown-menu a {
+                font-weight: 500;
+                padding: 6px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                transition: color 0.2s;
+            }
+
+                .dropdown-menu a:hover {
+                    color: #7aa9e0;
+                }
+
+        /* ---------- SECCIONES ---------- */
+        section {
+            padding: 60px 0 40px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+
+            .section-title::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -8px;
+                width: 60%;
+                height: 4px;
+                background: #0b1a2e;
+                border-radius: 4px;
+            }
+
+        /* ---------- HERO ---------- */
+        #inicio {
+            padding-top: 20px;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .hero-foto {
+            flex: 0 0 200px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #d0dbe8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: #3a5a7a;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+            .hero-foto img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .hero-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+                font-weight: 700;
+                margin-bottom: 8px;
+                line-height: 1.2;
+            }
+
+            .hero-text .titulo {
+                font-size: 1.3rem;
+                font-weight: 500;
+                color: #2c5282;
+                margin-bottom: 16px;
+            }
+
+            .hero-text p {
+                font-size: 1.05rem;
+                line-height: 1.6;
+                color: #334155;
+                max-width: 600px;
+            }
+
+        /* ---------- EXPERIENCIA ---------- */
+        .experiencia-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .exp-item {
+            background: #fff;
+            padding: 24px 28px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+            border-left: 4px solid #0b1a2e;
+        }
+
+            .exp-item h3 {
+                font-size: 1.25rem;
+                margin-bottom: 4px;
+            }
+
+            .exp-item .empresa {
+                font-weight: 600;
+                color: #2c5282;
+                margin-bottom: 12px;
+            }
+
+            .exp-item ul {
+                padding-left: 20px;
+                list-style: disc;
+                color: #334155;
+                line-height: 1.7;
+            }
+
+                .exp-item ul li {
+                    margin-bottom: 4px;
+                }
+
+        /* ---------- HABILIDADES ---------- */
+        .habilidades-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 18px;
+            background: #fff;
+            padding: 30px 32px;
+            border-radius: 20px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        }
+
+        .habilidad-tag {
+            background: #e9edf4;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #1e293b;
+            transition: 0.2s;
+        }
+
+            .habilidad-tag:hover {
+                background: #0b1a2e;
+                color: #fff;
+            }
+
+        /* ---------- CARRUSEL (ruleta) ---------- */
+        .carrusel-wrapper {
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .carrusel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+            .carrusel-header h3 {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+        .carrusel-controls {
+            display: flex;
+            gap: 10px;
+        }
+
+            .carrusel-controls button {
+                background: #0b1a2e;
+                border: none;
+                color: #fff;
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                cursor: pointer;
+                font-size: 1.2rem;
+                transition: 0.2s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+                .carrusel-controls button:hover {
+                    background: #2c5282;
+                    transform: scale(1.05);
+                }
+
+        .carrusel-track {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 12px 4px 20px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            /* ocultar scrollbar */
+            scrollbar-width: none;
+        }
+
+            .carrusel-track::-webkit-scrollbar {
+                display: none;
+            }
+
+        .tarjeta {
+            flex: 0 0 280px;
+            scroll-snap-align: start;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+            transition: 0.25s;
+            cursor: pointer;
+            border: 1px solid #eef2f6;
+        }
+
+            .tarjeta:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 14px 32px rgba(0, 0, 0, 0.10);
+            }
+
+        .tarjeta-img {
+            height: 160px;
+            background: #d0dbe8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #3a5a7a;
+        }
+
+            .tarjeta-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .tarjeta-body {
+            padding: 18px 20px 22px;
+        }
+
+            .tarjeta-body h4 {
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin-bottom: 6px;
+            }
+
+            .tarjeta-body p {
+                font-size: 0.9rem;
+                color: #475569;
+                line-height: 1.5;
+            }
+
+            .tarjeta-body .link-drive {
+                display: inline-block;
+                margin-top: 12px;
+                font-weight: 600;
+                color: #0b1a2e;
+                font-size: 0.9rem;
+                border-bottom: 2px solid transparent;
+                transition: 0.2s;
+            }
+
+                .tarjeta-body .link-drive:hover {
+                    border-bottom-color: #0b1a2e;
+                }
+
+        /* Botón "Ver más" extra */
+        .ver-mas-btn {
+            display: inline-block;
+            background: #0b1a2e;
+            color: #fff;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-weight: 600;
+            margin-top: 12px;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+            .ver-mas-btn:hover {
+                background: #2c5282;
+                transform: scale(1.02);
+            }
+
+        /* ---------- CONTACTO ---------- */
+        #contacto {
+            background: #0b1a2e;
+            color: #fff;
+            margin-top: 20px;
+            padding: 50px 0 40px;
+        }
+
+            #contacto .section-title {
+                color: #fff;
+            }
+
+                #contacto .section-title::after {
+                    background: #7aa9e0;
+                }
+
+        .contacto-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contacto-info {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+            .contacto-info a {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-size: 1.05rem;
+                transition: 0.2s;
+            }
+
+                .contacto-info a:hover {
+                    color: #7aa9e0;
+                }
+
+            .contacto-info i {
+                width: 24px;
+                font-size: 1.3rem;
+            }
+
+        .contacto-redes {
+            display: flex;
+            gap: 20px;
+        }
+
+            .contacto-redes a {
+                font-size: 1.8rem;
+                transition: 0.2s;
+            }
+
+                .contacto-redes a:hover {
+                    color: #7aa9e0;
+                    transform: scale(1.1);
+                }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero {
+                gap: 30px;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin: 0 auto;
+            }
+
+            .experiencia-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .tarjeta {
+                flex: 0 0 230px;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            header {
+                padding: 0 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header>
+        <div class="logo">Edgardo<span>Fajardo</span></div>
+        <nav class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#certificados">Certificados</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="#inicio">Inicio</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#certificados">Certificados</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============ INICIO ============ -->
+        <section id="inicio">
+            <div class="container hero">
+                <div class="hero-foto">
+                    <!-- Coloca tu foto aquí. Reemplaza el src con la ruta de tu imagen -->
+                    <img src="https://via.placeholder.com/200x200/0b1a2e/fff?text=EF" alt="Edgardo Fajardo" />
+                </div>
+                <div class="hero-text">
+                    <h1>Edgardo Alfredo Fajardo Enamorado</h1>
+                    <div class="titulo">Ingeniero Eléctrico Industrial · Egresado UNAH</div>
+                    <p>
+                        Apasionado por el mantenimiento industrial, la automatización y el análisis de datos.
+                        Experiencia práctica en Cargill, manejo de SAP, Power BI, AutoCAD y programación PLC.
+                        Enfoque en mejora continua, eficiencia energética y trabajo colaborativo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ EXPERIENCIA ============ -->
+        <section id="experiencia">
+            <div class="container">
+                <h2 class="section-title">Experiencia</h2>
+                <div class="experiencia-grid">
+                    <div class="exp-item">
+                        <h3>Práctica Profesional – Supervisor de Mantenimiento</h3>
+                        <div class="empresa">Cargill · Ene 2026 – Jun 2026</div>
+                        <ul>
+                            <li>Coordinación diaria de mantenimiento con técnicos y contratistas.</li>
+                            <li>Gestión y seguimiento de órdenes de trabajo en SAP.</li>
+                            <li>Actualización de planes de mantenimiento preventivo.</li>
+                            <li>Análisis de datos operativos para identificar tendencias de falla.</li>
+                            <li>Participación en proyectos de expansión y mejora continua.</li>
+                        </ul>
+                    </div>
+                    <div class="exp-item">
+                        <h3>Formación complementaria</h3>
+                        <div class="empresa">Proyectos y certificaciones</div>
+                        <ul>
+                            <li>Diseño de instalaciones eléctricas BT/MT.</li>
+                            <li>Automatización con PLC (Ladder, SCL, LOGO!).</li>
+                            <li>Desarrollo de software de predicción de consumo eléctrico.</li>
+                            <li>Auditoría energética y eficiencia.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ HABILIDADES ============ -->
+        <section id="habilidades">
+            <div class="container">
+                <h2 class="section-title">Habilidades</h2>
+                <div class="habilidades-grid">
+                    <span class="habilidad-tag"><i class="fas fa-cogs"></i> SAP</span>
+                    <span class="habilidad-tag"><i class="fas fa-chart-bar"></i> Power BI</span>
+                    <span class="habilidad-tag"><i class="fas fa-drafting-compass"></i> AutoCAD</span>
+                    <span class="habilidad-tag"><i class="fas fa-microchip"></i> PLC (Ladder, SCL)</span>
+                    <span class="habilidad-tag"><i class="fas fa-plug"></i> Instalaciones BT/MT</span>
+                    <span class="habilidad-tag"><i class="fas fa-tools"></i> Mantenimiento industrial</span>
+                    <span class="habilidad-tag"><i class="fas fa-file-code"></i> Python / C#</span>
+                    <span class="habilidad-tag"><i class="fas fa-robot"></i> Automatización</span>
+                    <span class="habilidad-tag"><i class="fas fa-bolt"></i> Eficiencia energética</span>
+                    <span class="habilidad-tag"><i class="fas fa-users"></i> Trabajo en equipo</span>
+                    <span class="habilidad-tag"><i class="fas fa-chart-line"></i> Análisis de datos</span>
+                    <span class="habilidad-tag"><i class="fas fa-project-diagram"></i> Gestión de proyectos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CERTIFICADOS ============ -->
+        <section id="certificados">
+            <div class="container">
+                <h2 class="section-title">Certificados</h2>
+
+                <!-- Certificados INFOP -->
+                <div class="carrusel-wrapper">
+                    <div class="carrusel-header">
+                        <h3><i class="fas fa-certificate"></i> INFOP</h3>
+                        <div class="carrusel-controls">
+                            <button class="carrusel-prev" data-target="infop"><i class="fas fa-chevron-left"></i></button>
+                            <button class="carrusel-next" data-target="infop"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="carrusel-track" id="track-infop">
+                        <!-- Las tarjetas se inyectarán desde JS -->
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/ejemplo-infop" target="_blank" class="ver-mas-btn">Ver todos en Drive <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Certificados Huawei -->
+                <div class="carrusel-wrapper">
+                    <div class="carrusel-header">
+                        <h3><i class="fas fa-cloud"></i> Huawei ICT Academy</h3>
+                        <div class="carrusel-controls">
+                            <button class="carrusel-prev" data-target="huawei"><i class="fas fa-chevron-left"></i></button>
+                            <button class="carrusel-next" data-target="huawei"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="carrusel-track" id="track-huawei"></div>
+                    <a href="https://drive.google.com/drive/folders/ejemplo-huawei" target="_blank" class="ver-mas-btn">Ver todos en Drive <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Certificados Importantes -->
+                <div class="carrusel-wrapper">
+                    <div class="carrusel-header">
+                        <h3><i class="fas fa-star"></i> Certificaciones destacadas</h3>
+                        <div class="carrusel-controls">
+                            <button class="carrusel-prev" data-target="importantes"><i class="fas fa-chevron-left"></i></button>
+                            <button class="carrusel-next" data-target="importantes"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="carrusel-track" id="track-importantes"></div>
+                    <a href="https://drive.google.com/drive/folders/ejemplo-importantes" target="_blank" class="ver-mas-btn">Ver todos en Drive <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Otros (CIMEQH, etc.) -->
+                <div class="carrusel-wrapper">
+                    <div class="carrusel-header">
+                        <h3><i class="fas fa-graduation-cap"></i> Otros (CIMEQH, etc.)</h3>
+                        <div class="carrusel-controls">
+                            <button class="carrusel-prev" data-target="otros"><i class="fas fa-chevron-left"></i></button>
+                            <button class="carrusel-next" data-target="otros"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="carrusel-track" id="track-otros"></div>
+                    <a href="https://drive.google.com/drive/folders/ejemplo-otros" target="_blank" class="ver-mas-btn">Ver todos en Drive <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============ PROYECTOS ============ -->
+        <section id="proyectos">
+            <div class="container">
+                <h2 class="section-title">Proyectos</h2>
+                <div class="carrusel-wrapper">
+                    <div class="carrusel-header">
+                        <h3><i class="fas fa-laptop-code"></i> Proyectos destacados</h3>
+                        <div class="carrusel-controls">
+                            <button class="carrusel-prev" data-target="proyectos"><i class="fas fa-chevron-left"></i></button>
+                            <button class="carrusel-next" data-target="proyectos"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="carrusel-track" id="track-proyectos"></div>
+                    <a href="https://drive.google.com/drive/folders/ejemplo-proyectos" target="_blank" class="ver-mas-btn">Ver todos en Drive <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACTO ============ -->
+        <section id="contacto">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <div class="contacto-grid">
+                    <div class="contacto-info">
+                        <a href="tel:+50496253141"><i class="fas fa-phone-alt"></i> +504 9625-3141</a>
+                        <a href="mailto:edgardo03alfredo@gmail.com"><i class="fas fa-envelope"></i> edgardo03alfredo@gmail.com</a>
+                        <a href="#" target="_blank"><i class="fas fa-map-marker-alt"></i> San Pedro Sula, Honduras</a>
+                    </div>
+                    <div class="contacto-redes">
+                        <a href="https://linkedin.com/in/edgardo-fajardo" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <p style="margin-top: 30px; color: #94a3b8; font-size: 0.9rem; text-align: center;">
+                    &copy; 2026 Edgardo Fajardo · Portafolio profesional
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+    // ================================================================
+    //  DATOS (certificados y proyectos)
+    //  Cada elemento: { titulo, descripcion, enlace, imagen (opcional) }
+    //  Usamos emojis o iconos como placeholder visual
+    // ================================================================
+
+    const data = {
+      infop: [
+        { titulo: 'Administración de Mantenimiento', descripcion: 'Gestión de activos y planes de mantenimiento.', enlace: 'https://drive.google.com/file/d/ejemplo1' },
+        { titulo: 'Liderazgo', descripcion: 'Habilidades directivas y trabajo en equipo.', enlace: 'https://drive.google.com/file/d/ejemplo2' },
+        { titulo: 'Gestión del Talento Humano', descripcion: 'Reclutamiento, desarrollo y retención.', enlace: 'https://drive.google.com/file/d/ejemplo3' },
+        { titulo: 'Motivación al Trabajo', descripcion: 'Estrategias para entornos productivos.', enlace: 'https://drive.google.com/file/d/ejemplo4' },
+        { titulo: 'Oratoria', descripcion: 'Comunicación efectiva y presentaciones.', enlace: 'https://drive.google.com/file/d/ejemplo5' },
+        { titulo: 'Formulación de Proyectos', descripcion: 'Evaluación y gestión de inversiones.', enlace: 'https://drive.google.com/file/d/ejemplo6' }
+      ],
+      huawei: [
+        { titulo: 'Redes de Computadoras', descripcion: 'Fundamentos de redes y protocolos.', enlace: 'https://drive.google.com/file/d/ejemplo7' },
+        { titulo: 'Tecnologías 5G', descripcion: 'Arquitectura y aplicaciones 5G.', enlace: 'https://drive.google.com/file/d/ejemplo8' },
+        { titulo: 'Computación en la Nube', descripcion: 'Servicios cloud y despliegue.', enlace: 'https://drive.google.com/file/d/ejemplo9' },
+        { titulo: 'Inteligencia Artificial', descripcion: 'Fundamentos de IA y machine learning.', enlace: 'https://drive.google.com/file/d/ejemplo10' },
+        { titulo: 'Ciberseguridad', descripcion: 'Seguridad en redes y sistemas.', enlace: 'https://drive.google.com/file/d/ejemplo11' }
+      ],
+      importantes: [
+        { titulo: 'NFPA 70E – Seguridad Eléctrica', descripcion: 'Norma para seguridad en lugares de trabajo.', enlace: 'https://drive.google.com/file/d/ejemplo12' },
+        { titulo: 'Power BI Certification', descripcion: 'Análisis de datos y visualización.', enlace: 'https://drive.google.com/file/d/ejemplo13' },
+        { titulo: 'Auditoría Energética', descripcion: 'Eficiencia y diagnóstico energético.', enlace: 'https://drive.google.com/file/d/ejemplo14' },
+        { titulo: 'Autoridad, Dirección y Liderazgo', descripcion: 'Curso Coursera – Habilidades directivas.', enlace: 'https://drive.google.com/file/d/ejemplo15' }
+      ],
+      otros: [
+        { titulo: 'Análisis de Emisiones', descripcion: 'Fuentes fijas y móviles – CIMEQH.', enlace: 'https://drive.google.com/file/d/ejemplo16' },
+        { titulo: 'Supresores de Transientes', descripcion: 'Protección contra sobretensiones.', enlace: 'https://drive.google.com/file/d/ejemplo17' },
+        { titulo: 'Soluciones de Distribución', descripcion: 'BT y MT – CIMEQH.', enlace: 'https://drive.google.com/file/d/ejemplo18' }
+      ],
+      proyectos: [
+        { titulo: 'LVNetworkSim', descripcion: 'Simulación de redes BT – tesis.', enlace: 'https://drive.google.com/file/d/ejemplo19' },
+        { titulo: 'Instalación Eléctrica', descripcion: 'Diseño completo con memoria de cálculo.', enlace: 'https://drive.google.com/file/d/ejemplo20' },
+        { titulo: 'Automatización de Mezcladoras', descripcion: 'Control con PLC e impresión 3D.', enlace: 'https://drive.google.com/file/d/ejemplo21' },
+        { titulo: 'Software de Predicción', descripcion: 'Cálculo de pérdidas y proyección 15 años.', enlace: 'https://drive.google.com/file/d/ejemplo22' },
+        { titulo: 'Paper de Automatización', descripcion: 'Optimización de procesos industriales.', enlace: 'https://drive.google.com/file/d/ejemplo23' }
+      ]
+    };
+
+    // Colores para imágenes placeholder (iconos)
+    const iconMap = {
+      infop: 'fa-briefcase',
+      huawei: 'fa-cloud',
+      importantes: 'fa-award',
+      otros: 'fa-book',
+      proyectos: 'fa-flask'
+    };
+
+    // Renderizar tarjetas en cada track
+    function renderCards(trackId, items, iconClass) {
+      const track = document.getElementById(trackId);
+      if (!track) return;
+      track.innerHTML = '';
+      items.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'tarjeta';
+        // Al hacer clic en la tarjeta, abre el enlace
+        card.addEventListener('click', () => {
+          if (item.enlace) window.open(item.enlace, '_blank');
+        });
+        // Estructura
+        card.innerHTML = `
+          <div class="tarjeta-img" style="background: #e2e8f0; color: #1e293b;">
+            <i class="fas ${iconClass} fa-3x" style="opacity:0.5;"></i>
+          </div>
+          <div class="tarjeta-body">
+            <h4>${item.titulo}</h4>
+            <p>${item.descripcion}</p>
+            <span class="link-drive">Ver en Drive →</span>
+          </div>
+        `;
+        track.appendChild(card);
+      });
+    }
+
+    // Inicializar todos los tracks
+    renderCards('track-infop', data.infop, iconMap.infop);
+    renderCards('track-huawei', data.huawei, iconMap.huawei);
+    renderCards('track-importantes', data.importantes, iconMap.importantes);
+    renderCards('track-otros', data.otros, iconMap.otros);
+    renderCards('track-proyectos', data.proyectos, iconMap.proyectos);
+
+    // ================================================================
+    //  FUNCIONALIDAD CARRUSEL (scroll con botones)
+    // ================================================================
+    document.querySelectorAll('.carrusel-track').forEach(track => {
+      // cada track tiene su propio contenedor de botones asociado por data-target
+      const wrapper = track.closest('.carrusel-wrapper');
+      const prevBtn = wrapper.querySelector('.carrusel-prev');
+      const nextBtn = wrapper.querySelector('.carrusel-next');
+
+      if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+          track.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+        nextBtn.addEventListener('click', () => {
+          track.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+      }
+    });
+
+    // ================================================================
+    //  MENÚ HAMBURGUESA
+    // ================================================================
+    const hamburger = document.getElementById('hamburgerBtn');
+    const dropdown = document.getElementById('dropdownMenu');
+
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdown.classList.toggle('open');
+    });
+
+    // Cerrar dropdown al hacer clic fuera
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target) && e.target !== hamburger) {
+        dropdown.classList.remove('open');
+      }
+    });
+
+    // Cerrar dropdown al seleccionar un enlace
+    dropdown.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        dropdown.classList.remove('open');
+      });
+    });
+
+    // Ajuste de offset para anclas (header fijo)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+    </script>
+
+</body>
+</html>
