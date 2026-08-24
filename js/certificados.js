@@ -580,7 +580,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
 
             imagen:
-                "img/certificados/titulo.png",
+                "/img/certificados/titulo.png",
 
             tags: [
                 {
