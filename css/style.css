@@ -2736,3 +2736,202 @@ button {
     .certificate-gallery-link {
         overflow-wrap: anywhere;
     }
+
+/* =========================================================
+   75. ABOUT ME
+   ========================================================= */
+
+.about-page {
+    overflow: hidden;
+}
+
+.about-section-light,
+.about-section-dark {
+    padding: 80px 0;
+}
+
+.about-section-light {
+    background: #f3f6f5;
+    color: #172126;
+}
+
+.about-section-dark {
+    background: radial-gradient( circle at 80% 30%, rgba(11, 140, 100, 0.07), transparent 35% ), #091412;
+    color: #ffffff;
+}
+
+
+.about-container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.about-container-reverse {
+    grid-template-columns: 0.85fr 1fr;
+}
+
+    .about-container-reverse .about-text {
+        order: 2;
+    }
+
+    .about-container-reverse .about-image {
+        order: 1;
+    }
+
+
+/* =========================================================
+   76. INTRODUCCIÓN
+   ========================================================= */
+
+.about-hero {
+    padding-top: 145px;
+}
+
+.about-intro h1 {
+    max-width: 700px;
+    margin-bottom: 25px;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+.about-intro p,
+.about-text p {
+    max-width: 650px;
+    margin-bottom: 18px;
+    color: #536164;
+    font-size: 0.98rem;
+    line-height: 1.75;
+}
+
+.about-section-dark .about-text p {
+    color: #aebbb7;
+}
+
+
+/* =========================================================
+   77. TÍTULOS
+   ========================================================= */
+
+.about-text h2 {
+    max-width: 620px;
+    margin-bottom: 22px;
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   78. IMÁGENES
+   ========================================================= */
+
+.about-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+    .about-image img {
+        width: 100%;
+        max-width: 480px;
+        max-height: 430px;
+        display: block;
+        object-fit: contain;
+    }
+
+
+/* =========================================================
+   79. CIERRE
+   ========================================================= */
+
+.about-closing {
+    margin-top: 25px !important;
+    color: #0b8c64 !important;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   80. RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .about-section-light,
+    .about-section-dark {
+        padding: 65px 0;
+    }
+
+    .about-hero {
+        padding-top: 120px;
+    }
+
+    .about-container,
+    .about-container-reverse {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+        .about-container-reverse .about-text,
+        .about-container-reverse .about-image {
+            order: initial;
+        }
+
+    .about-text {
+        text-align: left;
+    }
+
+    .about-image {
+        min-height: 240px;
+    }
+
+        .about-image img {
+            max-height: 330px;
+        }
+}
+
+
+@media (max-width: 500px) {
+
+    .about-container {
+        width: 88%;
+    }
+
+    .about-section-light,
+    .about-section-dark {
+        padding: 55px 0;
+    }
+
+    .about-hero {
+        padding-top: 105px;
+    }
+
+    .about-intro h1 {
+        font-size: 2.1rem;
+    }
+
+    .about-intro p,
+    .about-text p {
+        font-size: 0.92rem;
+        line-height: 1.68;
+    }
+
+    .about-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-image {
+        min-height: 210px;
+    }
+
+        .about-image img {
+            max-height: 280px;
+        }
+}

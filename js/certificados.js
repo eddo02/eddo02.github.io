@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
     /* =====================================================
        DATOS
     ====================================================== */
-
     const certificados = [
 
 
@@ -95,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
 
             imagen:
-                "../img/certificados/titulo.png",
+                "/img/certificados/titulo.png",
 
             tags: [
                 {
@@ -150,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
 
             imagen:
-                "../img/certificados/titulo.png",
+                "/img/certificados/titulo.png",
 
             tags: [
                 {
@@ -205,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
 
             imagen:
-                "../img/certificados/titulo.png",
+                "/img/certificados/titulo.png",
 
             tags: [
                 {
@@ -260,7 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
 
             imagen:
-                "../img/certificados/titulo.png",
+                "/img/certificados/titulo.png",
 
             tags: [
                 {
@@ -320,7 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
 
             imagen:
-                "../img/certificados/titulo.png",
+                "/img/certificados/titulo.png",
 
             tags: [
                 {
@@ -355,7 +354,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         /* ================================================
-           LIDERAZGO
+           LIDERAZGO (UNAM / Coursera)
         ================================================= */
 
         {
@@ -370,7 +369,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
 
             imagen:
-                "../img/certificados/titulo.png",
+                "/img/certificados/titulo.png",
 
             tags: [
                 {
@@ -408,7 +407,6 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         },
 
-
         /* ================================================
            ENERGY INDUSTRY LANDSCAPE
         ================================================= */
@@ -420,83 +418,28 @@ document.addEventListener("DOMContentLoaded", () => {
             },
 
             descripcion: {
-                es: "Formación sobre el panorama y principales aspectos de la industria energética.",
-                en: "Training on the landscape and key aspects of the energy industry."
+                es: "Curso sobre el panorama de la industria energética, impartido por Nova Gaia Kefas.",
+                en: "Course on the energy industry landscape, taught by Nova Gaia Kefas."
             },
 
             imagen:
-                "../img/certificados/titulo.png",
+                "img/certificados/titulo.png",
 
             tags: [
-                {
-                    id: "energia",
-                    es: "Energía",
-                    en: "Energy"
-                },
-                {
-                    id: "industria",
-                    es: "Industria",
-                    en: "Industry"
-                },
                 {
                     id: "gestion-energetica",
                     es: "Gestión Energética",
                     en: "Energy Management"
                 },
                 {
-                    id: "cargill",
-                    es: "Cargill",
-                    en: "Cargill"
-                }
-            ],
-
-            enlaces: [
-                {
-                    texto: {
-                        es: "Ver certificados",
-                        en: "View certificates"
-                    },
-
-                    url:
-                        "https://drive.google.com/drive/folders/1xw9Wygc6enxCMIT_mb7NyyAtIF25_aTV?usp=drive_link"
-                }
-            ]
-        },
-
-
-        /* ================================================
-           INFOP - ADMINISTRACIÓN DE MANTENIMIENTO
-        ================================================= */
-
-        {
-            titulo: {
-                es: "Administración de Mantenimiento",
-                en: "Maintenance Management"
-            },
-
-            descripcion: {
-                es: "Capacitación en administración y gestión de actividades de mantenimiento.",
-                en: "Training in maintenance administration and management."
-            },
-
-            imagen:
-                "../img/certificados/titulo.png",
-
-            tags: [
-                {
-                    id: "mantenimiento",
-                    es: "Mantenimiento",
-                    en: "Maintenance"
+                    id: "nova-gaia",
+                    es: "Nova Gaia Kefas",
+                    en: "Nova Gaia Kefas"
                 },
                 {
-                    id: "gestion",
-                    es: "Gestión",
-                    en: "Management"
-                },
-                {
-                    id: "infop",
-                    es: "INFOP",
-                    en: "INFOP"
+                    id: "energia",
+                    es: "Energía",
+                    en: "Energy"
                 }
             ],
 
@@ -508,363 +451,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     },
 
                     url:
-                        "https://drive.google.com/drive/folders/1WioGWURs2fA8LvZUpa-_nMiT-a7KQwt5?usp=drive_link"
-                }
-            ]
-        },
-
-
-        /* ================================================
-           INFOP - ADMINISTRACIÓN DEL TIEMPO
-        ================================================= */
-
-        {
-            titulo: {
-                es: "Administración del Tiempo",
-                en: "Time Management"
-            },
-
-            descripcion: {
-                es: "Capacitación orientada a la organización y administración eficiente del tiempo.",
-                en: "Training focused on efficient time management and organization."
-            },
-
-            imagen:
-                "../img/certificados/titulo.png",
-
-            tags: [
-                {
-                    id: "gestion",
-                    es: "Gestión",
-                    en: "Management"
-                },
-                {
-                    id: "productividad",
-                    es: "Productividad",
-                    en: "Productivity"
-                },
-                {
-                    id: "infop",
-                    es: "INFOP",
-                    en: "INFOP"
-                }
-            ],
-
-            enlaces: [
-                {
-                    texto: {
-                        es: "Ver certificado",
-                        en: "View certificate"
-                    },
-
-                    url:
-                        "https://drive.google.com/drive/folders/1WioGWURs2fA8LvZUpa-_nMiT-a7KQwt5?usp=drive_link"
-                }
-            ]
-        },
-
-
-        /* ================================================
-           INFOP - GESTIÓN DEL TALENTO HUMANO
-        ================================================= */
-
-        {
-            titulo: {
-                es: "Gestión del Talento Humano",
-                en: "Human Talent Management"
-            },
-
-            descripcion: {
-                es: "Capacitación en gestión del talento humano y administración de personas.",
-                en: "Training in human talent and people management."
-            },
-
-            imagen:
-                "../img/certificados/titulo.png",
-
-            tags: [
-                {
-                    id: "recursos-humanos",
-                    es: "Recursos Humanos",
-                    en: "Human Resources"
-                },
-                {
-                    id: "gestion",
-                    es: "Gestión",
-                    en: "Management"
-                },
-                {
-                    id: "infop",
-                    es: "INFOP",
-                    en: "INFOP"
-                }
-            ],
-
-            enlaces: [
-                {
-                    texto: {
-                        es: "Ver certificado",
-                        en: "View certificate"
-                    },
-
-                    url:
-                        "https://drive.google.com/drive/folders/1WioGWURs2fA8LvZUpa-_nMiT-a7KQwt5?usp=drive_link"
-                }
-            ]
-        },
-
-
-        /* ================================================
-           INFOP - LIDERAZGO
-        ================================================= */
-
-        {
-            titulo: {
-                es: "Liderazgo",
-                en: "Leadership"
-            },
-
-            descripcion: {
-                es: "Capacitación orientada al desarrollo de habilidades de liderazgo.",
-                en: "Training focused on leadership skills development."
-            },
-
-            imagen:
-                "../img/certificados/titulo.png",
-
-            tags: [
-                {
-                    id: "liderazgo",
-                    es: "Liderazgo",
-                    en: "Leadership"
-                },
-                {
-                    id: "gestion",
-                    es: "Gestión",
-                    en: "Management"
-                },
-                {
-                    id: "infop",
-                    es: "INFOP",
-                    en: "INFOP"
-                }
-            ],
-
-            enlaces: [
-                {
-                    texto: {
-                        es: "Ver certificado",
-                        en: "View certificate"
-                    },
-
-                    url:
-                        "https://drive.google.com/drive/folders/1WioGWURs2fA8LvZUpa-_nMiT-a7KQwt5?usp=drive_link"
-                }
-            ]
-        },
-
-
-        /* ================================================
-           INFOP - MOTIVACIÓN AL TRABAJO
-        ================================================= */
-
-        {
-            titulo: {
-                es: "Motivación al Trabajo",
-                en: "Work Motivation"
-            },
-
-            descripcion: {
-                es: "Capacitación orientada al desarrollo de la motivación y el desempeño laboral.",
-                en: "Training focused on motivation and workplace performance."
-            },
-
-            imagen:
-                "../img/certificados/titulo.png",
-
-            tags: [
-                {
-                    id: "liderazgo",
-                    es: "Liderazgo",
-                    en: "Leadership"
-                },
-                {
-                    id: "desarrollo-profesional",
-                    es: "Desarrollo Profesional",
-                    en: "Professional Development"
-                },
-                {
-                    id: "infop",
-                    es: "INFOP",
-                    en: "INFOP"
-                }
-            ],
-
-            enlaces: [
-                {
-                    texto: {
-                        es: "Ver certificado",
-                        en: "View certificate"
-                    },
-
-                    url:
-                        "https://drive.google.com/drive/folders/1WioGWURs2fA8LvZUpa-_nMiT-a7KQwt5?usp=drive_link"
-                }
-            ]
-        },
-
-
-        /* ================================================
-           INFOP - ORATORIA
-        ================================================= */
-
-        {
-            titulo: {
-                es: "Oratoria",
-                en: "Public Speaking"
-            },
-
-            descripcion: {
-                es: "Capacitación enfocada en comunicación oral y expresión efectiva.",
-                en: "Training focused on oral communication and effective speaking."
-            },
-
-            imagen:
-                "/img/certificados/titulo.png",
-
-            tags: [
-                {
-                    id: "comunicacion",
-                    es: "Comunicación",
-                    en: "Communication"
-                },
-                {
-                    id: "desarrollo-profesional",
-                    es: "Desarrollo Profesional",
-                    en: "Professional Development"
-                },
-                {
-                    id: "infop",
-                    es: "INFOP",
-                    en: "INFOP"
-                }
-            ],
-
-            enlaces: [
-                {
-                    texto: {
-                        es: "Ver certificado",
-                        en: "View certificate"
-                    },
-
-                    url:
-                        "https://drive.google.com/drive/folders/1WioGWURs2fA8LvZUpa-_nMiT-a7KQwt5?usp=drive_link"
-                }
-            ]
-        },
-
-
-        /* ================================================
-           INFOP - DEBERES Y DERECHOS LABORALES
-        ================================================= */
-
-        {
-            titulo: {
-                es: "Deberes y Derechos Laborales",
-                en: "Labor Rights and Duties"
-            },
-
-            descripcion: {
-                es: "Capacitación sobre derechos, deberes y aspectos fundamentales del ámbito laboral.",
-                en: "Training on fundamental labor rights, duties, and workplace matters."
-            },
-
-            imagen:
-                "../img/certificados/titulo.png",
-
-            tags: [
-                {
-                    id: "legislacion-laboral",
-                    es: "Legislación Laboral",
-                    en: "Labor Law"
-                },
-                {
-                    id: "gestion",
-                    es: "Gestión",
-                    en: "Management"
-                },
-                {
-                    id: "infop",
-                    es: "INFOP",
-                    en: "INFOP"
-                }
-            ],
-
-            enlaces: [
-                {
-                    texto: {
-                        es: "Ver certificado",
-                        en: "View certificate"
-                    },
-
-                    url:
-                        "https://drive.google.com/drive/folders/1WioGWURs2fA8LvZUpa-_nMiT-a7KQwt5?usp=drive_link"
-                }
-            ]
-        },
-
-
-        /* ================================================
-           INFOP - ADMINISTRACIÓN BÁSICA PARA MIPYMES
-        ================================================= */
-
-        {
-            titulo: {
-                es: "Introducción a la Administración Básica para MIPYMES",
-                en: "Introduction to Basic Administration for MSMEs"
-            },
-
-            descripcion: {
-                es: "Capacitación introductoria en administración y gestión básica para micro, pequeñas y medianas empresas.",
-                en: "Introductory training in basic administration and management for micro, small, and medium-sized enterprises."
-            },
-
-            imagen:
-                "../img/certificados/titulo.png",
-
-            tags: [
-                {
-                    id: "administracion",
-                    es: "Administración",
-                    en: "Administration"
-                },
-                {
-                    id: "emprendimiento",
-                    es: "Emprendimiento",
-                    en: "Entrepreneurship"
-                },
-                {
-                    id: "infop",
-                    es: "INFOP",
-                    en: "INFOP"
-                }
-            ],
-
-            enlaces: [
-                {
-                    texto: {
-                        es: "Ver certificado",
-                        en: "View certificate"
-                    },
-
-                    url:
-                        "https://drive.google.com/drive/folders/1WioGWURs2fA8LvZUpa-_nMiT-a7KQwt5?usp=drive_link"
+                        "https://drive.google.com/file/d/1oHLGWKCRDe_rR5bIVkHFyM6miCFKlbWZ/view?usp=sharing"
                 }
             ]
         },
 
         /* ================================================
-           CIMEQH - EMISIONES
+           ANÁLISIS DE EMISIONES DE FUENTES FIJAS Y MÓVILES
         ================================================= */
 
         {
@@ -874,18 +467,23 @@ document.addEventListener("DOMContentLoaded", () => {
             },
 
             descripcion: {
-                es: "Capacitación sobre análisis y evaluación de emisiones provenientes de fuentes fijas y móviles.",
-                en: "Training on the analysis and evaluation of emissions from stationary and mobile sources."
+                es: "Capacitación sobre análisis de emisiones, impartida por CIMEQH y SERVIR MEDIO AMBIENTE.",
+                en: "Training on emissions analysis, taught by CIMEQH and SERVIR MEDIO AMBIENTE."
             },
 
             imagen:
-                "../img/certificados/titulo.png",
+                "img/certificados/titulo.png",
 
             tags: [
                 {
-                    id: "energia",
-                    es: "Energía",
-                    en: "Energy"
+                    id: "cimeqh",
+                    es: "CIMEQH",
+                    en: "CIMEQH"
+                },
+                {
+                    id: "analisis-tecnico",
+                    es: "Análisis Técnico",
+                    en: "Technical Analysis"
                 },
                 {
                     id: "medio-ambiente",
@@ -893,9 +491,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     en: "Environment"
                 },
                 {
-                    id: "cimeqh",
-                    es: "CIMEQH",
-                    en: "CIMEQH"
+                    id: "energia",
+                    es: "Energía",
+                    en: "Energy"
                 }
             ],
 
@@ -907,14 +505,722 @@ document.addEventListener("DOMContentLoaded", () => {
                     },
 
                     url:
-                        "https://drive.google.com/drive/folders/1csQN5DwePUnSDBZbWYe01q-qdy7kgLjL?usp=drive_link"
+                        "https://drive.google.com/file/d/10vDLs4rAzTBzTaV4vQ04YIgeqM75UVpl/view?usp=sharing"
                 }
             ]
         },
 
+        /* ================================================
+           SUPRESORES DE TRANSIENTES
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Supresores de Transientes",
+                en: "Transient Suppressors"
+            },
+
+            descripcion: {
+                es: "Curso sobre supresores de transientes, impartido por Schneider Electric y Distribuidora Industrial.",
+                en: "Course on transient suppressors, taught by Schneider Electric and Distribuidora Industrial."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "schneider",
+                    es: "Schneider Electric",
+                    en: "Schneider Electric"
+                },
+                {
+                    id: "distribucion-electrica",
+                    es: "Distribución Eléctrica",
+                    en: "Electrical Distribution"
+                },
+                {
+                    id: "electricidad",
+                    es: "Electricidad",
+                    en: "Electricity"
+                },
+                {
+                    id: "proteccion",
+                    es: "Protección",
+                    en: "Protection"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/file/d/1rZ1JCgS03EIbw9dE7SA9TFr-M6oaEpmV/view?usp=sharing"
+                }
+            ]
+        },
 
         /* ================================================
-           CIMEQH - ADMINISTRACIÓN DE PERSONAL
+           ADMINISTRACIÓN DE CENTROS DE CÓMPUTO (INFOP)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Administración de Centros de Cómputo",
+                en: "Computer Center Administration"
+            },
+
+            descripcion: {
+                es: "Curso de INFOP sobre administración de centros de cómputo.",
+                en: "INFOP course on computer center administration."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "infop",
+                    es: "INFOP",
+                    en: "INFOP"
+                },
+                {
+                    id: "gestion",
+                    es: "Gestión",
+                    en: "Management"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/file/d/1o_PW9F0ItBHN7leiCrqH35BbK48O6v6z/view?usp=sharing"
+                }
+            ]
+        },
+
+        /* ================================================
+           CONTABILIDAD BÁSICA 1 PARA NO CONTADORES (INFOP)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Contabilidad Básica 1 para No Contadores",
+                en: "Basic Accounting 1 for Non-Accountants"
+            },
+
+            descripcion: {
+                es: "Curso de INFOP sobre contabilidad básica para no contadores.",
+                en: "INFOP course on basic accounting for non-accountants."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "infop",
+                    es: "INFOP",
+                    en: "INFOP"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/file/d/1QIPIszs16MzMdFg6cN3dkUBMcjgh4E75/view?usp=sharing"
+                }
+            ]
+        },
+
+        /* ================================================
+           CONTABILIDAD BÁSICA 2 PARA NO CONTADORES (INFOP)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Contabilidad Básica 2 para No Contadores",
+                en: "Basic Accounting 2 for Non-Accountants"
+            },
+
+            descripcion: {
+                es: "Curso de INFOP sobre contabilidad básica para no contadores.",
+                en: "INFOP course on basic accounting for non-accountants."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "infop",
+                    es: "INFOP",
+                    en: "INFOP"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/file/d/1hMNgwDIomvwNkMZjnbVETjXc61HxlxHb/view?usp=sharing"
+                }
+            ]
+        },
+
+        /* ================================================
+           ETIQUETA Y PROTOCOLO (INFOP)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Etiqueta y Protocolo",
+                en: "Etiquette and Protocol"
+            },
+
+            descripcion: {
+                es: "Curso de INFOP sobre etiqueta y protocolo.",
+                en: "INFOP course on etiquette and protocol."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "infop",
+                    es: "INFOP",
+                    en: "INFOP"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/file/d/1C6oJJCdOzmE8cf5x9X7SViT3Qx7KhJOC/view?usp=sharing"
+                }
+            ]
+        },
+
+        /* ================================================
+           INGLÉS BÁSICO (INFOP)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Inglés Básico",
+                en: "Basic English"
+            },
+
+            descripcion: {
+                es: "Curso de INFOP para reforzar el dominio del idioma inglés.",
+                en: "INFOP course to reinforce English language proficiency."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "infop",
+                    es: "INFOP",
+                    en: "INFOP"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/file/d/1cPGFeiIZyt_efoIJPpO1k61865Af8twO/view?usp=sharing"
+                }
+            ]
+        },
+
+        /* ================================================
+           MS. EXCEL AVANZADO (INFOP)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "MS. Excel Avanzado",
+                en: "MS Excel Advanced"
+            },
+
+            descripcion: {
+                es: "Curso de INFOP sobre Microsoft Excel avanzado, incluyendo macros.",
+                en: "INFOP course on advanced Microsoft Excel, including macros."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "infop",
+                    es: "INFOP",
+                    en: "INFOP"
+                },
+                {
+                    id: "analisis-datos",
+                    es: "Análisis de Datos",
+                    en: "Data Analysis"
+                },
+                {
+                    id: "excel",
+                    es: "Excel",
+                    en: "Excel"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/file/d/1TM10NxN3RKf2z3ZXYrO-wXlvkdtSZuZ7/view?usp=sharing"
+                }
+            ]
+        },
+
+        /* ================================================
+           PROGRAMAR EN PYTHON (INFOP)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Programar en Python",
+                en: "Programming in Python"
+            },
+
+            descripcion: {
+                es: "Curso de INFOP sobre programación en Python.",
+                en: "INFOP course on programming in Python."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "infop",
+                    es: "INFOP",
+                    en: "INFOP"
+                },
+                {
+                    id: "analisis-datos",
+                    es: "Análisis de Datos",
+                    en: "Data Analysis"
+                },
+                {
+                    id: "python",
+                    es: "Python",
+                    en: "Python"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/file/d/19U5cLc4mFu8BAXsY0XqlY8qBXnYMr2OG/view?usp=sharing"
+                }
+            ]
+        },
+
+        /* ================================================
+           ADMINISTRACIÓN DE MANTENIMIENTO (INFOP)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Administración de Mantenimiento",
+                en: "Maintenance Management"
+            },
+
+            descripcion: {
+                es: "Curso de INFOP sobre administración de mantenimiento.",
+                en: "INFOP course on maintenance management."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "infop",
+                    es: "INFOP",
+                    en: "INFOP"
+                },
+                {
+                    id: "gestion",
+                    es: "Gestión",
+                    en: "Management"
+                },
+                {
+                    id: "mantenimiento",
+                    es: "Mantenimiento",
+                    en: "Maintenance"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/drive/folders/1WioGWURs2fA8LvZUpa-_nMiT-a7KQwt5?usp=drive_link"
+                }
+            ]
+        },
+
+        /* ================================================
+           ADMINISTRACIÓN DEL TIEMPO (INFOP)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Administración del Tiempo",
+                en: "Time Management"
+            },
+
+            descripcion: {
+                es: "Curso de INFOP sobre administración del tiempo.",
+                en: "INFOP course on time management."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "infop",
+                    es: "INFOP",
+                    en: "INFOP"
+                },
+                {
+                    id: "gestion",
+                    es: "Gestión",
+                    en: "Management"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/drive/folders/1WioGWURs2fA8LvZUpa-_nMiT-a7KQwt5?usp=drive_link"
+                }
+            ]
+        },
+
+        /* ================================================
+           GESTIÓN DEL TALENTO HUMANO (INFOP)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Gestión del Talento Humano",
+                en: "Human Talent Management"
+            },
+
+            descripcion: {
+                es: "Curso de INFOP sobre gestión del talento humano.",
+                en: "INFOP course on human talent management."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "infop",
+                    es: "INFOP",
+                    en: "INFOP"
+                },
+                {
+                    id: "gestion",
+                    es: "Gestión",
+                    en: "Management"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/drive/folders/1WioGWURs2fA8LvZUpa-_nMiT-a7KQwt5?usp=drive_link"
+                }
+            ]
+        },
+
+        /* ================================================
+           LIDERAZGO (INFOP)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Liderazgo",
+                en: "Leadership"
+            },
+
+            descripcion: {
+                es: "Curso de INFOP sobre liderazgo.",
+                en: "INFOP course on leadership."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "infop",
+                    es: "INFOP",
+                    en: "INFOP"
+                },
+                {
+                    id: "liderazgo",
+                    es: "Liderazgo",
+                    en: "Leadership"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/drive/folders/1WioGWURs2fA8LvZUpa-_nMiT-a7KQwt5?usp=drive_link"
+                }
+            ]
+        },
+
+        /* ================================================
+           MOTIVACIÓN AL TRABAJO (INFOP)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Motivación al Trabajo",
+                en: "Work Motivation"
+            },
+
+            descripcion: {
+                es: "Curso de INFOP sobre motivación al trabajo.",
+                en: "INFOP course on work motivation."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "infop",
+                    es: "INFOP",
+                    en: "INFOP"
+                },
+                {
+                    id: "gestion",
+                    es: "Gestión",
+                    en: "Management"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/drive/folders/1WioGWURs2fA8LvZUpa-_nMiT-a7KQwt5?usp=drive_link"
+                }
+            ]
+        },
+
+        /* ================================================
+           ORATORIA (INFOP)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Oratoria",
+                en: "Public Speaking"
+            },
+
+            descripcion: {
+                es: "Curso de INFOP sobre oratoria.",
+                en: "INFOP course on public speaking."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "infop",
+                    es: "INFOP",
+                    en: "INFOP"
+                },
+                {
+                    id: "gestion",
+                    es: "Gestión",
+                    en: "Management"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/drive/folders/1WioGWURs2fA8LvZUpa-_nMiT-a7KQwt5?usp=drive_link"
+                }
+            ]
+        },
+
+        /* ================================================
+           DEBERES Y DERECHOS LABORALES (INFOP)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Deberes y Derechos Laborales",
+                en: "Labor Duties and Rights"
+            },
+
+            descripcion: {
+                es: "Curso de INFOP sobre deberes y derechos laborales.",
+                en: "INFOP course on labor duties and rights."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "infop",
+                    es: "INFOP",
+                    en: "INFOP"
+                },
+                {
+                    id: "gestion",
+                    es: "Gestión",
+                    en: "Management"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/drive/folders/1WioGWURs2fA8LvZUpa-_nMiT-a7KQwt5?usp=drive_link"
+                }
+            ]
+        },
+
+        /* ================================================
+           INTRODUCCIÓN A LA ADMINISTRACIÓN BÁSICA PARA MIPYMES (INFOP)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Introducción a la Administración Básica para MIPYMES",
+                en: "Introduction to Basic Administration for MSMEs"
+            },
+
+            descripcion: {
+                es: "Curso de INFOP sobre administración básica para MIPYMES.",
+                en: "INFOP course on basic administration for MSMEs."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "infop",
+                    es: "INFOP",
+                    en: "INFOP"
+                },
+                {
+                    id: "gestion",
+                    es: "Gestión",
+                    en: "Management"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/drive/folders/1WioGWURs2fA8LvZUpa-_nMiT-a7KQwt5?usp=drive_link"
+                }
+            ]
+        },
+
+        /* ================================================
+           ADMINISTRACIÓN DE PERSONAL (CIMEQH)
         ================================================= */
 
         {
@@ -924,18 +1230,18 @@ document.addEventListener("DOMContentLoaded", () => {
             },
 
             descripcion: {
-                es: "Capacitación relacionada con la administración y gestión del personal.",
-                en: "Training related to personnel administration and management."
+                es: "Capacitación de CIMEQH sobre administración de personal.",
+                en: "CIMEQH training on personnel administration."
             },
 
             imagen:
-                "../img/certificados/titulo.png",
+                "img/certificados/titulo.png",
 
             tags: [
                 {
-                    id: "recursos-humanos",
-                    es: "Recursos Humanos",
-                    en: "Human Resources"
+                    id: "cimeqh",
+                    es: "CIMEQH",
+                    en: "CIMEQH"
                 },
                 {
                     id: "gestion",
@@ -943,9 +1249,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     en: "Management"
                 },
                 {
-                    id: "cimeqh",
-                    es: "CIMEQH",
-                    en: "CIMEQH"
+                    id: "administracion",
+                    es: "Administración",
+                    en: "Administration"
                 }
             ],
 
@@ -962,205 +1268,39 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         },
 
-
         /* ================================================
-           CIMEQH - SUPRESORES
+           5G BASICS (Huawei ICT Academy)
         ================================================= */
 
         {
             titulo: {
-                es: "Supresores de Transientes",
-                en: "Transient Voltage Suppressors"
+                es: "5G Basics: What it's all about",
+                en: "5G Basics: What it's all about"
             },
 
             descripcion: {
-                es: "Capacitación sobre protección de sistemas eléctricos mediante supresores de transientes.",
-                en: "Training on electrical system protection using transient voltage suppressors."
+                es: "Curso de Huawei ICT Academy sobre fundamentos de 5G.",
+                en: "Huawei ICT Academy course on 5G fundamentals."
             },
 
             imagen:
-                "../img/certificados/titulo.png",
+                "img/certificados/titulo.png",
 
             tags: [
-                {
-                    id: "electricidad",
-                    es: "Electricidad",
-                    en: "Electrical"
-                },
-                {
-                    id: "proteccion-electrica",
-                    es: "Protección Eléctrica",
-                    en: "Electrical Protection"
-                },
-                {
-                    id: "cimeqh",
-                    es: "CIMEQH",
-                    en: "CIMEQH"
-                }
-            ],
-
-            enlaces: [
-                {
-                    texto: {
-                        es: "Ver certificado",
-                        en: "View certificate"
-                    },
-
-                    url:
-                        "https://drive.google.com/drive/folders/1csQN5DwePUnSDBZbWYe01q-qdy7kgLjL?usp=drive_link"
-                }
-            ]
-        },
-
-
-        /* ================================================
-           CIMEQH - DISTRIBUCIÓN ELÉCTRICA
-        ================================================= */
-
-        {
-            titulo: {
-                es: "Soluciones de Distribución Eléctrica",
-                en: "Electrical Distribution Solutions"
-            },
-
-            descripcion: {
-                es: "Capacitación sobre soluciones de distribución eléctrica para sistemas de baja y media tensión.",
-                en: "Training on electrical distribution solutions for low- and medium-voltage systems."
-            },
-
-            imagen:
-                "../img/certificados/titulo.png",
-
-            tags: [
-                {
-                    id: "electricidad",
-                    es: "Electricidad",
-                    en: "Electrical"
-                },
-                {
-                    id: "distribucion-electrica",
-                    es: "Distribución Eléctrica",
-                    en: "Electrical Distribution"
-                },
-                {
-                    id: "baja-tension",
-                    es: "Baja Tensión",
-                    en: "Low Voltage"
-                },
-                {
-                    id: "media-tension",
-                    es: "Media Tensión",
-                    en: "Medium Voltage"
-                },
-                {
-                    id: "cimeqh",
-                    es: "CIMEQH",
-                    en: "CIMEQH"
-                },
-                {
-                    id: "schneider",
-                    es: "Schneider Electric",
-                    en: "Schneider Electric"
-                }
-            ],
-
-            enlaces: [
-                {
-                    texto: {
-                        es: "Ver certificado",
-                        en: "View certificate"
-                    },
-
-                    url:
-                        "https://drive.google.com/file/d/1rEl2L9vdxwsBlSNqNRuDzPqsvNG5TyhI/view?usp=sharing"
-                }
-            ]
-        },
-
-
-        /* ================================================
-           HUAWEI - REDES
-        ================================================= */
-
-        {
-            titulo: {
-                es: "Redes de Computadoras",
-                en: "Computer Networks"
-            },
-
-            descripcion: {
-                es: "Formación en fundamentos y tecnologías de redes de computadoras.",
-                en: "Training in computer networking fundamentals and technologies."
-            },
-
-            imagen:
-                "../img/certificados/titulo.png",
-
-            tags: [
-                {
-                    id: "redes",
-                    es: "Redes",
-                    en: "Networking"
-                },
-                {
-                    id: "telecomunicaciones",
-                    es: "Telecomunicaciones",
-                    en: "Telecommunications"
-                },
                 {
                     id: "huawei",
                     es: "Huawei",
                     en: "Huawei"
-                }
-            ],
-
-            enlaces: [
-                {
-                    texto: {
-                        es: "Ver certificado",
-                        en: "View certificate"
-                    },
-
-                    url:
-                        "https://drive.google.com/drive/folders/16k7AEKfkuDU1dLHAy28VboxS166kFM_0?usp=drive_link"
-                }
-            ]
-        },
-
-
-        /* ================================================
-           HUAWEI - 5G
-        ================================================= */
-
-        {
-            titulo: {
-                es: "Tecnologías 5G",
-                en: "5G Technologies"
-            },
-
-            descripcion: {
-                es: "Formación relacionada con fundamentos y aplicaciones de las tecnologías 5G.",
-                en: "Training related to the fundamentals and applications of 5G technologies."
-            },
-
-            imagen:
-                "../img/certificados/titulo.png",
-
-            tags: [
+                },
                 {
                     id: "5g",
                     es: "5G",
                     en: "5G"
                 },
                 {
-                    id: "telecomunicaciones",
-                    es: "Telecomunicaciones",
-                    en: "Telecommunications"
-                },
-                {
-                    id: "huawei",
-                    es: "Huawei",
-                    en: "Huawei"
+                    id: "redes",
+                    es: "Redes",
+                    en: "Networks"
                 }
             ],
 
@@ -1172,200 +1312,44 @@ document.addEventListener("DOMContentLoaded", () => {
                     },
 
                     url:
-                        "https://drive.google.com/drive/folders/16k7AEKfkuDU1dLHAy28VboxS166kFM_0?usp=drive_link"
+                        "https://drive.google.com/file/d/1AdvS4CHRuBM_u8uKvU_pthr68WY3iuyU/view?usp=sharing"
                 }
             ]
         },
 
-
         /* ================================================
-           HUAWEI - CLOUD
+           5G NETWORK ARCHITECTURE (Huawei ICT Academy)
         ================================================= */
 
         {
             titulo: {
-                es: "Computación en la Nube",
-                en: "Cloud Computing"
+                es: "5G Network Architecture and Key Technologies",
+                en: "5G Network Architecture and Key Technologies"
             },
 
             descripcion: {
-                es: "Formación sobre fundamentos y tecnologías de computación en la nube.",
-                en: "Training on cloud computing fundamentals and technologies."
+                es: "Curso de Huawei ICT Academy sobre arquitectura y tecnologías clave de 5G.",
+                en: "Huawei ICT Academy course on 5G architecture and key technologies."
             },
 
             imagen:
-                "../img/certificados/titulo.png",
+                "img/certificados/titulo.png",
 
             tags: [
-                {
-                    id: "cloud",
-                    es: "Computación en la Nube",
-                    en: "Cloud Computing"
-                },
-                {
-                    id: "tecnologia",
-                    es: "Tecnología",
-                    en: "Technology"
-                },
                 {
                     id: "huawei",
                     es: "Huawei",
                     en: "Huawei"
-                }
-            ],
-
-            enlaces: [
-                {
-                    texto: {
-                        es: "Ver certificado",
-                        en: "View certificate"
-                    },
-
-                    url:
-                        "https://drive.google.com/drive/folders/16k7AEKfkuDU1dLHAy28VboxS166kFM_0?usp=drive_link"
-                }
-            ]
-        },
-
-
-        /* ================================================
-           HUAWEI - INTELIGENCIA ARTIFICIAL
-        ================================================= */
-
-        {
-            titulo: {
-                es: "Inteligencia Artificial",
-                en: "Artificial Intelligence"
-            },
-
-            descripcion: {
-                es: "Formación introductoria en conceptos y aplicaciones de inteligencia artificial.",
-                en: "Introductory training in artificial intelligence concepts and applications."
-            },
-
-            imagen:
-                "../img/certificados/titulo.png",
-
-            tags: [
-                {
-                    id: "ia",
-                    es: "Inteligencia Artificial",
-                    en: "Artificial Intelligence"
                 },
                 {
-                    id: "tecnologia",
-                    es: "Tecnología",
-                    en: "Technology"
-                },
-                {
-                    id: "huawei",
-                    es: "Huawei",
-                    en: "Huawei"
-                }
-            ],
-
-            enlaces: [
-                {
-                    texto: {
-                        es: "Ver certificado",
-                        en: "View certificate"
-                    },
-
-                    url:
-                        "https://drive.google.com/drive/folders/16k7AEKfkuDU1dLHAy28VboxS166kFM_0?usp=drive_link"
-                }
-            ]
-        },
-
-
-        /* ================================================
-           HUAWEI - IoT
-        ================================================= */
-
-        {
-            titulo: {
-                es: "Internet de las Cosas (IoT)",
-                en: "Internet of Things (IoT)"
-            },
-
-            descripcion: {
-                es: "Formación relacionada con fundamentos y aplicaciones del Internet de las Cosas.",
-                en: "Training related to Internet of Things fundamentals and applications."
-            },
-
-            imagen:
-                "../img/certificados/titulo.png",
-
-            tags: [
-                {
-                    id: "iot",
-                    es: "IoT",
-                    en: "IoT"
-                },
-                {
-                    id: "tecnologia",
-                    es: "Tecnología",
-                    en: "Technology"
-                },
-                {
-                    id: "huawei",
-                    es: "Huawei",
-                    en: "Huawei"
-                }
-            ],
-
-            enlaces: [
-                {
-                    texto: {
-                        es: "Ver certificado",
-                        en: "View certificate"
-                    },
-
-                    url:
-                        "https://drive.google.com/drive/folders/16k7AEKfkuDU1dLHAy28VboxS166kFM_0?usp=drive_link"
-                }
-            ]
-        },
-
-
-        /* ================================================
-           HUAWEI - CIBERSEGURIDAD
-        ================================================= */
-
-        {
-            titulo: {
-                es: "Ciberseguridad",
-                en: "Cybersecurity"
-            },
-
-            descripcion: {
-                es: "Formación en fundamentos de ciberseguridad y protección de sistemas y redes.",
-                en: "Training in cybersecurity fundamentals and the protection of systems and networks."
-            },
-
-            imagen:
-                "../img/certificados/titulo.png",
-
-            tags: [
-                {
-                    id: "ciberseguridad",
-                    es: "Ciberseguridad",
-                    en: "Cybersecurity"
-                },
-                {
-                    id: "seguridad",
-                    es: "Seguridad",
-                    en: "Security"
+                    id: "5g",
+                    es: "5G",
+                    en: "5G"
                 },
                 {
                     id: "redes",
                     es: "Redes",
-                    en: "Networking"
-                },
-                {
-                    id: "huawei",
-                    es: "Huawei",
-                    en: "Huawei"
+                    en: "Networks"
                 }
             ],
 
@@ -1377,31 +1361,177 @@ document.addEventListener("DOMContentLoaded", () => {
                     },
 
                     url:
-                        "https://drive.google.com/drive/folders/16k7AEKfkuDU1dLHAy28VboxS166kFM_0?usp=drive_link"
+                        "https://drive.google.com/file/d/15gW2OsM39dDfE35ODWkKzSF5h_wfD0RZ/view?usp=sharing"
                 }
             ]
         },
 
-
         /* ================================================
-           HUAWEI - DATOS
+           CLOUD ADVANCED (Huawei ICT Academy)
         ================================================= */
 
         {
             titulo: {
-                es: "Gestión y Análisis de Datos",
+                es: "Cloud Advanced: Architecture and Technologies",
+                en: "Cloud Advanced: Architecture and Technologies"
+            },
+
+            descripcion: {
+                es: "Curso de Huawei ICT Academy sobre arquitectura y tecnologías avanzadas de nube.",
+                en: "Huawei ICT Academy course on advanced cloud architecture and technologies."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "huawei",
+                    es: "Huawei",
+                    en: "Huawei"
+                },
+                {
+                    id: "cloud",
+                    es: "Cloud",
+                    en: "Cloud"
+                },
+                {
+                    id: "redes",
+                    es: "Redes",
+                    en: "Networks"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/file/d/17UOYS3DBGEte5PMUKOlOzlGz87GT34IL/view?usp=sharing"
+                }
+            ]
+        },
+
+        /* ================================================
+           CLOUD BASICS (Huawei ICT Academy)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Cloud Basics: Development and Basic Concepts",
+                en: "Cloud Basics: Development and Basic Concepts"
+            },
+
+            descripcion: {
+                es: "Curso de Huawei ICT Academy sobre conceptos básicos y desarrollo en la nube.",
+                en: "Huawei ICT Academy course on cloud basics and development."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "huawei",
+                    es: "Huawei",
+                    en: "Huawei"
+                },
+                {
+                    id: "cloud",
+                    es: "Cloud",
+                    en: "Cloud"
+                },
+                {
+                    id: "redes",
+                    es: "Redes",
+                    en: "Networks"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/file/d/1zMomvdWzQ8qfumWYSjQ--sBWIa2Z-PYk/view?usp=sharing"
+                }
+            ]
+        },
+
+        /* ================================================
+           COMPUTER NETWORK (Huawei ICT Academy)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Computer Network",
+                en: "Computer Network"
+            },
+
+            descripcion: {
+                es: "Curso de Huawei ICT Academy sobre redes de computadoras.",
+                en: "Huawei ICT Academy course on computer networks."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "huawei",
+                    es: "Huawei",
+                    en: "Huawei"
+                },
+                {
+                    id: "redes",
+                    es: "Redes",
+                    en: "Networks"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/file/d/1LF-DNbw6_-3t6-UmQPv2WGjIex5y1NUL/view?usp=sharing"
+                }
+            ]
+        },
+
+        /* ================================================
+           DATA MANAGEMENT AND ANALYSIS (Huawei ICT Academy)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Data Management and Analysis",
                 en: "Data Management and Analysis"
             },
 
             descripcion: {
-                es: "Formación relacionada con la gestión, procesamiento y análisis de datos.",
-                en: "Training related to data management, processing, and analysis."
+                es: "Curso de Huawei ICT Academy sobre gestión y análisis de datos.",
+                en: "Huawei ICT Academy course on data management and analysis."
             },
 
             imagen:
-                "../img/certificados/titulo.png",
+                "img/certificados/titulo.png",
 
             tags: [
+                {
+                    id: "huawei",
+                    es: "Huawei",
+                    en: "Huawei"
+                },
                 {
                     id: "datos",
                     es: "Datos",
@@ -1411,16 +1541,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     id: "analisis-datos",
                     es: "Análisis de Datos",
                     en: "Data Analysis"
-                },
-                {
-                    id: "tecnologia",
-                    es: "Tecnología",
-                    en: "Technology"
-                },
-                {
-                    id: "huawei",
-                    es: "Huawei",
-                    en: "Huawei"
                 }
             ],
 
@@ -1432,12 +1552,257 @@ document.addEventListener("DOMContentLoaded", () => {
                     },
 
                     url:
-                        "https://drive.google.com/drive/folders/16k7AEKfkuDU1dLHAy28VboxS166kFM_0?usp=drive_link"
+                        "https://drive.google.com/file/d/1Ze3tDfSNQYMBp19M-X0mJismxp84gpSt/view?usp=sharing"
+                }
+            ]
+        },
+
+        /* ================================================
+           INFORMATION REPRESENTATION (Huawei ICT Academy)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Information Representation and Data Organization",
+                en: "Information Representation and Data Organization"
+            },
+
+            descripcion: {
+                es: "Curso de Huawei ICT Academy sobre representación de información y organización de datos.",
+                en: "Huawei ICT Academy course on information representation and data organization."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "huawei",
+                    es: "Huawei",
+                    en: "Huawei"
+                },
+                {
+                    id: "datos",
+                    es: "Datos",
+                    en: "Data"
+                },
+                {
+                    id: "analisis-datos",
+                    es: "Análisis de Datos",
+                    en: "Data Analysis"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/file/d/1tquUnqKo-e7t5vdOpgCugC0boss8cGlt/view?usp=sharing"
+                }
+            ]
+        },
+
+        /* ================================================
+           NEXT-GEN CYBER SECURITY (Huawei ICT Academy)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Next-Generation Cyber Security",
+                en: "Next-Generation Cyber Security"
+            },
+
+            descripcion: {
+                es: "Curso de Huawei ICT Academy sobre ciberseguridad de próxima generación.",
+                en: "Huawei ICT Academy course on next-generation cyber security."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "huawei",
+                    es: "Huawei",
+                    en: "Huawei"
+                },
+                {
+                    id: "seguridad",
+                    es: "Seguridad",
+                    en: "Security"
+                },
+                {
+                    id: "ciberseguridad",
+                    es: "Ciberseguridad",
+                    en: "Cybersecurity"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/file/d/1IDWxb7d6kdwrTOxr0de2cKppgGISUOBN/view?usp=sharing"
+                }
+            ]
+        },
+
+        /* ================================================
+           OVERVIEW OF AI (Huawei ICT Academy)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Overview of AI",
+                en: "Overview of AI"
+            },
+
+            descripcion: {
+                es: "Curso de Huawei ICT Academy sobre introducción a la inteligencia artificial.",
+                en: "Huawei ICT Academy course on introduction to artificial intelligence."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "huawei",
+                    es: "Huawei",
+                    en: "Huawei"
+                },
+                {
+                    id: "ia",
+                    es: "IA",
+                    en: "AI"
+                },
+                {
+                    id: "datos",
+                    es: "Datos",
+                    en: "Data"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/file/d/1MjPoD_FXluYoDqrF2t-ZGS83GbzGdzp4/view?usp=sharing"
+                }
+            ]
+        },
+
+        /* ================================================
+           OVERVIEW OF IOT (Huawei ICT Academy)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Overview of IoT Technologies",
+                en: "Overview of IoT Technologies"
+            },
+
+            descripcion: {
+                es: "Curso de Huawei ICT Academy sobre introducción a las tecnologías IoT.",
+                en: "Huawei ICT Academy course on introduction to IoT technologies."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "huawei",
+                    es: "Huawei",
+                    en: "Huawei"
+                },
+                {
+                    id: "iot",
+                    es: "IoT",
+                    en: "IoT"
+                },
+                {
+                    id: "redes",
+                    es: "Redes",
+                    en: "Networks"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/file/d/15WS0_BD4SKBS0rXJrKn8VAGLU5xHq33v/view?usp=sharing"
+                }
+            ]
+        },
+
+        /* ================================================
+           SEARCH AND AI (Huawei ICT Academy)
+        ================================================= */
+
+        {
+            titulo: {
+                es: "Search and AI",
+                en: "Search and AI"
+            },
+
+            descripcion: {
+                es: "Curso de Huawei ICT Academy sobre búsqueda e inteligencia artificial.",
+                en: "Huawei ICT Academy course on search and artificial intelligence."
+            },
+
+            imagen:
+                "img/certificados/titulo.png",
+
+            tags: [
+                {
+                    id: "huawei",
+                    es: "Huawei",
+                    en: "Huawei"
+                },
+                {
+                    id: "ia",
+                    es: "IA",
+                    en: "AI"
+                },
+                {
+                    id: "datos",
+                    es: "Datos",
+                    en: "Data"
+                }
+            ],
+
+            enlaces: [
+                {
+                    texto: {
+                        es: "Ver certificado",
+                        en: "View certificate"
+                    },
+
+                    url:
+                        "https://drive.google.com/file/d/1UK1uP-dG7czMV4DLv7oxjDLmDPXcBMG4/view?usp=sharing"
                 }
             ]
         }
-
     ];
+
 
     /* =====================================================
        ESTADO DE FILTROS
