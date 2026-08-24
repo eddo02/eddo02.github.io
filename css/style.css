@@ -1305,7 +1305,7 @@ button {
     .skill-icon svg {
         width: 30px;
         height: 30px;
-        stroke-width: 1.8;
+        stroke-width: 2;
     }
 
 .skill-card > span {
@@ -1786,7 +1786,7 @@ button {
         .footer-language .language-globe svg {
             width: 19px;
             height: 19px;
-            stroke-width: 1.7;
+            stroke-width: 2;
         }
 
     .footer-language a {
@@ -2004,7 +2004,7 @@ button {
     .language-globe svg {
         width: 17px;
         height: 17px;
-        stroke-width: 1.7;
+        stroke-width: 2;
     }
 
 
@@ -2059,4 +2059,680 @@ button {
     .nav-language-dropdown a:hover {
         color: #ffffff;
         background: rgba(11, 140, 100, 0.12);
+    }
+
+/* =========================================================
+   55. PÁGINA DE CERTIFICADOS
+   ========================================================= */
+
+
+/* =========================================================
+   56. ENCABEZADO
+   ========================================================= */
+
+.certificates-page {
+    background: #f3f6f5;
+}
+
+.certificates-header {
+    padding-top: 110px;
+    padding-bottom: 20px;
+    background: radial-gradient( circle at 75% 20%, rgba(11, 140, 100, 0.10), transparent 35% ), #f3f6f5;
+}
+
+.certificates-header-container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+.certificates-header h1 {
+    margin-bottom: 16px;
+    color: #172126;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    line-height: 1.1;
+}
+
+.certificates-header p {
+    max-width: 700px;
+    color: #5b696d;
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   57. CONTENIDO
+   ========================================================= */
+
+.certificates-content {
+    padding-top: 20px;
+    padding-bottom: 90px;
+}
+
+.certificates-layout {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   58. PANEL DE FILTROS
+   ========================================================= */
+
+.certificates-filters {
+    position: sticky;
+    top: 110px;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #d7e1dd;
+    box-shadow: 0 10px 28px rgba(18, 39, 35, 0.045);
+}
+
+.filters-header {
+    margin-bottom: 18px;
+}
+
+.filters-kicker {
+    display: block;
+    margin-bottom: 5px;
+    color: #0b8c64;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+.filters-header h2 {
+    color: #172126;
+    font-size: 1.15rem;
+}
+
+
+/* =========================================================
+   59. BOTÓN LIMPIAR
+   ========================================================= */
+
+.clear-filters-button {
+    margin-top: 14px;
+    padding: 7px 10px;
+    border: 1px solid #b7c8c2;
+    background: #f4f8f6;
+    color: #425154;
+    font-family: inherit;
+    font-size: 0.68rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+    .clear-filters-button:hover {
+        background: #e6f1ed;
+        border-color: #0b8c64;
+        color: #0b6e51;
+    }
+
+
+/* =========================================================
+   60. TAGS DE FILTROS
+   ========================================================= */
+
+.filter-tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+}
+
+.certificate-filter-tag {
+    width: auto;
+    min-height: 0;
+    padding: 4px 7px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(11, 140, 100, 0.25);
+    border-radius: 999px;
+    background: rgba(11, 140, 100, 0.05);
+    color: #4b635d;
+    font-family: inherit;
+    font-size: 0.61rem;
+    line-height: 1.1;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+    .certificate-filter-tag:hover {
+        background: rgba(11, 140, 100, 0.09);
+        border-color: rgba(11, 140, 100, 0.45);
+        color: #31564d;
+        transform: translateY(-1px);
+    }
+
+    .certificate-filter-tag:hover {
+        border-color: #6da995;
+    }
+
+
+    /* ---------- Estado incluir ---------- */
+
+    .certificate-filter-tag[data-state="include"] {
+        background: #0b8c64;
+        border-color: #0b8c64;
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+        .certificate-filter-tag[data-state="include"]
+        .filter-tag-state {
+            color: #ffffff;
+        }
+
+
+    /* ---------- Estado excluir ---------- */
+
+    .certificate-filter-tag[data-state="exclude"] {
+        background: #8f4f4a;
+        border-color: #8f4f4a;
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+        .certificate-filter-tag[data-state="exclude"]
+        .filter-tag-state {
+            color: #ffffff;
+        }
+
+.filter-tag-state {
+    width: auto;
+    flex-shrink: 0;
+    margin-left: 3px;
+    text-align: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   61. AYUDA DE FILTROS
+   ========================================================= */
+
+.filter-help {
+    margin-top: 18px;
+    color: #879397;
+    font-size: 0.64rem;
+    line-height: 1.5;
+}
+
+.filter-empty {
+    color: #8c999c;
+    font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   62. RESULTADOS
+   ========================================================= */
+
+.certificates-results {
+    min-width: 0;
+}
+
+.certificates-results-header {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+    .certificates-results-header p {
+        color: #758287;
+        font-size: 0.72rem;
+        font-weight: 600;
+    }
+
+
+/* =========================================================
+   63. GALERÍA
+   ========================================================= */
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+}
+
+
+/* =========================================================
+   64. TARJETA
+   ========================================================= */
+
+.certificate-gallery-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #d8e2de;
+    box-shadow: 0 9px 25px rgba(18, 39, 35, 0.04);
+    transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+    .certificate-gallery-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(11, 140, 100, 0.45);
+        box-shadow: 0 15px 32px rgba(18, 39, 35, 0.08);
+    }
+
+
+/* =========================================================
+   65. IMAGEN
+   ========================================================= */
+
+.certificate-gallery-image-link {
+    display: block;
+    height: 170px;
+    overflow: hidden;
+    background: linear-gradient( 145deg, #eef4f1, #f8faf9 );
+}
+
+.certificate-gallery-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    padding: 18px;
+    transition: transform 0.35s ease;
+}
+
+.certificate-gallery-card:hover
+.certificate-gallery-image {
+    transform: scale(1.025);
+}
+
+
+/* =========================================================
+   66. CONTENIDO DE TARJETA
+   ========================================================= */
+
+.certificate-gallery-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 21px 20px 20px;
+}
+
+    .certificate-gallery-content h2 {
+        margin-bottom: 10px;
+        color: #172126;
+        font-size: 1.08rem;
+        line-height: 1.3;
+    }
+
+    .certificate-gallery-content > p {
+        margin-bottom: 16px;
+        color: #5b696d;
+        font-size: 0.82rem;
+        line-height: 1.6;
+    }
+
+
+/* =========================================================
+   67. TAGS DE TARJETA
+   ========================================================= */
+
+.certificate-gallery-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: auto;
+    margin-bottom: 18px;
+}
+
+.certificate-gallery-tag {
+    padding: 5px 8px;
+    border: 1px solid rgba(11, 140, 100, 0.27);
+    border-radius: 999px;
+    background: rgba(11, 140, 100, 0.055);
+    color: #4b635d;
+    font-size: 0.62rem;
+    line-height: 1.1;
+}
+
+/* =========================================================
+   68. ENLACES
+   ========================================================= */
+
+.certificate-gallery-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.certificate-gallery-link {
+    color: #0b8c64;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+    .certificate-gallery-link:hover {
+        color: #066049;
+        transform: translateX(3px);
+    }
+
+
+/* =========================================================
+   69. SIN RESULTADOS
+   ========================================================= */
+
+.certificates-empty {
+    min-height: 260px;
+    padding: 45px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px dashed #b7c8c2;
+    background: rgba(255, 255, 255, 0.55);
+}
+
+    .certificates-empty > span {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #0b8c64;
+        border: 1px solid #a8c2b9;
+        border-radius: 50%;
+    }
+
+    .certificates-empty svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .certificates-empty h2 {
+        margin-bottom: 7px;
+        color: #344346;
+        font-size: 1.1rem;
+    }
+
+    .certificates-empty p {
+        color: #7a888c;
+        font-size: 0.82rem;
+    }
+
+
+/* =========================================================
+   70. RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .certificates-layout {
+        grid-template-columns: 190px 1fr;
+        gap: 24px;
+    }
+
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   71. BOTÓN DE FILTROS MÓVIL
+   ========================================================= */
+
+.mobile-filter-toggle {
+    display: none;
+    width: 100%;
+    padding: 11px 14px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(11, 140, 100, 0.40);
+    background: #e0f1ec;
+    color: #075d44;
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+    .mobile-filter-toggle > span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .mobile-filter-toggle svg {
+        width: 17px;
+        height: 17px;
+    }
+
+
+/* =========================================================
+   72. MÓVIL
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .certificates-header {
+        padding-top: 115px;
+        padding-bottom: 42px;
+    }
+
+    .certificates-content {
+        padding-top: 10px;
+        padding-bottom: 65px;
+    }
+
+    .certificates-layout {
+        width: 92%;
+        display: block;
+    }
+
+
+    /* ---------- Botón filtros ---------- */
+
+    .mobile-filter-toggle {
+        display: flex;
+        margin-bottom: 12px;
+    }
+
+
+    /* ---------- Panel filtros ---------- */
+
+    .certificates-filters {
+        position: static;
+        display: none;
+        width: 100%;
+        margin-bottom: 18px;
+        padding: 14px;
+    }
+
+        .certificates-filters.active {
+            display: block;
+        }
+
+
+    /* ---------- Cabecera filtros ---------- */
+
+    .filters-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    .clear-filters-button {
+        margin-top: 0;
+        white-space: nowrap;
+    }
+
+
+    /* ---------- Tags de filtros ---------- */
+
+    .filter-tags {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .certificate-filter-tag {
+        width: auto;
+        min-height: 28px;
+        flex: 0 0 auto;
+        padding: 5px 8px;
+        font-size: 0.63rem;
+    }
+
+    .filter-tag-state {
+        width: auto;
+    }
+
+
+    /* ---------- Ayuda ---------- */
+
+    .filter-help {
+        margin-top: 12px;
+        font-size: 0.60rem;
+    }
+
+
+    /* ---------- Resultados ---------- */
+
+    .certificates-results-header {
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+
+
+    /* ---------- Dos tarjetas ---------- */
+
+    .certificates-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+
+    /* ---------- Tarjeta ---------- */
+
+    .certificate-gallery-image-link {
+        height: 125px;
+    }
+
+    .certificate-gallery-image {
+        padding: 10px;
+    }
+
+    .certificate-gallery-content {
+        padding: 15px 12px 14px;
+    }
+
+        .certificate-gallery-content h2 {
+            font-size: 0.90rem;
+            line-height: 1.25;
+            overflow-wrap: anywhere;
+        }
+
+        .certificate-gallery-content > p {
+            font-size: 0.72rem;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+            margin-bottom: 11px;
+        }
+
+    .certificate-gallery-tags {
+        gap: 4px;
+        margin-bottom: 13px;
+    }
+
+    .certificate-gallery-tag {
+        padding: 4px 6px;
+        font-size: 0.56rem;
+        overflow-wrap: anywhere;
+    }
+
+    .certificate-gallery-link {
+        font-size: 0.68rem;
+        overflow-wrap: anywhere;
+    }
+}
+
+
+/* =========================================================
+   73. MÓVIL ESTRECHO
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .certificates-layout {
+        width: 90%;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .certificate-gallery-image-link {
+        height: 175px;
+    }
+
+    .certificate-gallery-content {
+        padding: 19px 18px 18px;
+    }
+
+        .certificate-gallery-content h2 {
+            font-size: 1.02rem;
+        }
+
+        .certificate-gallery-content > p {
+            font-size: 0.80rem;
+        }
+
+    .certificate-gallery-tag {
+        font-size: 0.62rem;
+    }
+
+    .certificate-gallery-link {
+        font-size: 0.75rem;
+    }
+}
+
+
+/* =========================================================
+   74. EVITAR DESBORDAMIENTO HORIZONTAL
+   ========================================================= */
+
+.certificates-page,
+.certificates-page * {
+    max-width: 100%;
+}
+
+    .certificates-page img {
+        height: auto;
+    }
+
+.certificate-gallery-content,
+.certificate-gallery-content > *,
+.certificates-header-container,
+.certificates-results {
+    min-width: 0;
+}
+
+    .certificate-gallery-content,
+    .certificate-gallery-content > p,
+    .certificate-gallery-content h2,
+    .certificate-gallery-link {
+        overflow-wrap: anywhere;
     }

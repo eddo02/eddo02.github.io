@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Certificaciones y formación profesional de Edgardo Fajardo.">
+
+    <title>
+        Certificaciones | Edgardo Fajardo
+    </title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+
+            <a href="../"
+               class="brand">
+
+                <div class="brand-name">
+                    Edgardo Fajardo
+                </div>
+
+                <div class="brand-role">
+                    Ingeniero Eléctrico Industrial
+                </div>
+
+            </a>
+
+
+            <button class="menu-toggle"
+                    id="menu-toggle"
+                    aria-label="Abrir menú"
+                    aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <nav class="nav-menu"
+                 id="nav-menu">
+
+                <a href="../">
+                    Inicio
+                </a>
+
+                <a href="../#experiencia">
+                    Experiencia
+                </a>
+
+                <a href="../#proyectos">
+                    Proyectos
+                </a>
+
+                <a href="../#habilidades">
+                    Habilidades
+                </a>
+
+                <a href="../#certificaciones">
+                    Certificaciones
+                </a>
+
+                <a href="../#contacto">
+                    Contacto
+                </a>
+
+
+                <!-- Selector de idioma -->
+
+                <div class="nav-language">
+
+                    <button class="nav-language-current"
+                            type="button"
+                            aria-label="Cambiar idioma">
+
+                        <span class="language-globe">
+                            <i data-lucide="globe"></i>
+                        </span>
+
+                        <span class="language-current-text">
+                            Español
+                        </span>
+
+                    </button>
+
+
+                    <div class="nav-language-dropdown">
+
+                        <a href="../en/certificaciones/">
+                            English
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main class="certificates-page">
+
+
+        <!-- =====================================================
+             ENCABEZADO
+        ====================================================== -->
+
+        <section class="certificates-header">
+
+            <div class="certificates-header-container">
+
+                <span class="section-kicker">
+                    FORMACIÓN Y DESARROLLO
+                </span>
+
+                <h1>
+                    Certificaciones
+                </h1>
+
+                <p>
+                    Certificaciones y capacitaciones complementarias
+                    en ingeniería, tecnología, seguridad y desarrollo
+                    profesional.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             GALERÍA + FILTROS
+        ====================================================== -->
+
+        <section class="certificates-content">
+            <button type="button"
+                    class="mobile-filter-toggle"
+                    id="mobile-filter-toggle"
+                    aria-expanded="false">
+                <span>
+                    <i data-lucide="sliders-horizontal"></i>
+                    Filtros
+                </span>
+
+                <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="certificates-layout">
+
+
+                <!-- =================================================
+             FILTROS
+        ================================================== -->
+
+                <aside class="certificates-filters"
+                       id="certificates-filters"
+                       >
+
+                    <div class="filters-header">
+
+                        <div>
+
+                            <span class="filters-kicker">
+                                FILTROS
+                            </span>
+
+                            <h2>
+                                Tags
+                            </h2>
+
+                        </div>
+
+
+                        <button type="button"
+                                id="clear-filters"
+                                class="clear-filters-button">
+                            Limpiar filtros
+                        </button>
+
+                    </div>
+
+
+                    <div class="filter-tags"
+                         id="filter-tags"></div>
+
+
+                    <div class="filter-help"
+                         id="filter-help">
+                        Haz clic una vez para incluir,
+                        dos veces para excluir y tres veces
+                        para volver al estado neutro.
+                    </div>
+
+                </aside>
+
+
+                <!-- =================================================
+             RESULTADOS
+        ================================================== -->
+
+                <div class="certificates-results">
+
+                    <div class="certificates-results-header">
+
+                        <p id="certificates-count">
+                            Certificados
+                        </p>
+
+                    </div>
+
+
+                    <div class="certificates-grid"
+                         id="certificates-container">
+                    </div>
+
+
+                    <div class="certificates-empty"
+                         id="certificates-empty"
+                         hidden>
+
+                        <span>
+                            <i data-lucide="search-x"></i>
+                        </span>
+
+                        <h2>
+                            No se encontraron certificados
+                        </h2>
+
+                        <p>
+                            No hay certificados que coincidan
+                            con los filtros seleccionados.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer id="contacto"
+            class="site-footer">
+
+        <div class="footer-container">
+
+
+            <!-- MENÚ -->
+
+            <div class="footer-navigation">
+
+                <span class="footer-kicker">
+                    MENÚ DEL SITIO
+                </span>
+
+
+                <nav class="footer-menu">
+
+                    <a href="../">
+                        Inicio
+                    </a>
+
+                    <a href="../sobre-mi/">
+                        Sobre mí
+                    </a>
+
+                    <a href="../proyectos/">
+                        Proyectos
+                    </a>
+
+                    <a href="../experiencia/">
+                        Experiencia
+                    </a>
+
+                    <a href="../certificaciones/">
+                        Certificaciones
+                    </a>
+
+                </nav>
+
+
+                <div class="footer-language">
+
+                    <span class="language-globe">
+                        <i data-lucide="globe"></i>
+                    </span>
+
+
+                    <a href="#"
+                       class="footer-language-active">
+                        Español
+                    </a>
+
+
+                    <span class="footer-language-divider">
+                        |
+                    </span>
+
+
+                    <a href="../en/certificaciones/"
+                       class="footer-language-link">
+                        English
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACTO -->
+
+            <div class="footer-contact">
+
+                <span class="footer-kicker">
+                    CONTACTO
+                </span>
+
+
+                <p class="footer-message">
+                    ¿Tienes una oportunidad profesional o quieres
+                    hablar sobre un proyecto? Escríbeme.
+                </p>
+
+
+                <div class="contact-list">
+
+
+                    <a href="https://api.whatsapp.com/send?phone=50496253141"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-item">
+
+                        <span class="contact-icon">
+                            <i data-lucide="phone"></i>
+                        </span>
+
+                        <span>
+                            +504 9625-3141
+                        </span>
+
+                    </a>
+
+
+                    <button type="button"
+                            class="contact-item contact-email"
+                            id="copy-email">
+
+                        <span class="contact-icon">
+                            <i data-lucide="mail"></i>
+                        </span>
+
+                        <span class="contact-email-text">
+                            edgardo03alfredo@gmail.com
+                        </span>
+
+                    </button>
+
+
+                    <a href="https://www.linkedin.com/in/edgardo-alfredo-fajardo-enamorado-88b56b1a7"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-item">
+
+                        <span class="contact-icon">
+
+                            <img src="../img/skills/LinkedIn_icon.svg"
+                                 alt="LinkedIn">
+
+                        </span>
+
+                        <span>
+                            www.linkedin.com/in/edgardo-alfredo-fajardo-enamorado-88b56b1a7
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+                <p class="copy-feedback"
+                   id="copy-feedback"
+                   aria-live="polite"></p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="footer-bottom-container">
+
+                <p>
+                    © 2026 Edgardo Fajardo.
+                </p>
+
+                <p>
+                    Ingeniero Eléctrico Industrial
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT GLOBAL
+    ====================================================== -->
+
+    <script src="../js/main.js"></script>
+
+    <!-- =====================================================
+         JAVASCRIPT ESPECÍFICO DE CERTIFICADOS
+    ====================================================== -->
+
+    <script src="../js/certificados.js"></script>
+
+</body>
+
+</html>
