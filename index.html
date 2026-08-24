@@ -1,880 +1,1273 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edgardo Fajardo · Portafolio</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
-    <!-- Font Awesome 6 (gratuito) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <style>
-        /* ---------- RESET & BASE ---------- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta charset="UTF-8">
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #f4f7fc;
-            color: #1e293b;
-            scroll-behavior: smooth;
-            padding-top: 70px;
-            /* espacio para header fijo */;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    <meta name="description"
+          content="Portafolio profesional de Edgardo Fajardo, Ingeniero Eléctrico Industrial.">
 
-        ul {
-            list-style: none;
-        }
+    <title>Edgardo Fajardo | Ingeniero Eléctrico Industrial</title>
 
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-        /* ---------- HEADER ---------- */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: #0b1a2e;
-            color: #fff;
-            padding: 0 24px;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .logo {
-            font-weight: 700;
-            font-size: 1.4rem;
-            letter-spacing: -0.5px;
-        }
-
-            .logo span {
-                color: #7aa9e0;
-            }
-        /* navegación escritorio */
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            font-weight: 500;
-        }
-
-            .nav-links a {
-                transition: color 0.2s;
-                font-size: 0.95rem;
-            }
-
-                .nav-links a:hover {
-                    color: #7aa9e0;
-                }
-        /* menú hamburguesa */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 8px;
-        }
-
-            .hamburger span {
-                display: block;
-                width: 26px;
-                height: 3px;
-                background: #fff;
-                border-radius: 4px;
-                transition: 0.3s;
-            }
-        /* dropdown móvil */
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 70px;
-            right: 0;
-            background: #0b1a2e;
-            width: 200px;
-            padding: 16px 20px;
-            border-radius: 0 0 12px 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            flex-direction: column;
-            gap: 14px;
-        }
-
-            .dropdown-menu.open {
-                display: flex;
-            }
-
-            .dropdown-menu a {
-                font-weight: 500;
-                padding: 6px 0;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-                transition: color 0.2s;
-            }
-
-                .dropdown-menu a:hover {
-                    color: #7aa9e0;
-                }
-
-        /* ---------- SECCIONES ---------- */
-        section {
-            padding: 60px 0 40px;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 40px;
-            position: relative;
-            display: inline-block;
-        }
-
-            .section-title::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -8px;
-                width: 60%;
-                height: 4px;
-                background: #0b1a2e;
-                border-radius: 4px;
-            }
-
-        /* ---------- HERO ---------- */
-        #inicio {
-            padding-top: 20px;
-        }
-
-        .hero {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-            flex-wrap: wrap;
-        }
-
-        .hero-foto {
-            flex: 0 0 200px;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: #d0dbe8;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
-            color: #3a5a7a;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-            .hero-foto img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-        .hero-text {
-            flex: 1;
-            min-width: 280px;
-        }
-
-            .hero-text h1 {
-                font-size: 2.8rem;
-                font-weight: 700;
-                margin-bottom: 8px;
-                line-height: 1.2;
-            }
-
-            .hero-text .titulo {
-                font-size: 1.3rem;
-                font-weight: 500;
-                color: #2c5282;
-                margin-bottom: 16px;
-            }
-
-            .hero-text p {
-                font-size: 1.05rem;
-                line-height: 1.6;
-                color: #334155;
-                max-width: 600px;
-            }
-
-        /* ---------- EXPERIENCIA ---------- */
-        .experiencia-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .exp-item {
-            background: #fff;
-            padding: 24px 28px;
-            border-radius: 16px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-            border-left: 4px solid #0b1a2e;
-        }
-
-            .exp-item h3 {
-                font-size: 1.25rem;
-                margin-bottom: 4px;
-            }
-
-            .exp-item .empresa {
-                font-weight: 600;
-                color: #2c5282;
-                margin-bottom: 12px;
-            }
-
-            .exp-item ul {
-                padding-left: 20px;
-                list-style: disc;
-                color: #334155;
-                line-height: 1.7;
-            }
-
-                .exp-item ul li {
-                    margin-bottom: 4px;
-                }
-
-        /* ---------- HABILIDADES ---------- */
-        .habilidades-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px 18px;
-            background: #fff;
-            padding: 30px 32px;
-            border-radius: 20px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-        }
-
-        .habilidad-tag {
-            background: #e9edf4;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            color: #1e293b;
-            transition: 0.2s;
-        }
-
-            .habilidad-tag:hover {
-                background: #0b1a2e;
-                color: #fff;
-            }
-
-        /* ---------- CARRUSEL (ruleta) ---------- */
-        .carrusel-wrapper {
-            position: relative;
-            margin-top: 20px;
-            margin-bottom: 40px;
-        }
-
-        .carrusel-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 16px;
-        }
-
-            .carrusel-header h3 {
-                font-size: 1.5rem;
-                font-weight: 600;
-            }
-
-        .carrusel-controls {
-            display: flex;
-            gap: 10px;
-        }
-
-            .carrusel-controls button {
-                background: #0b1a2e;
-                border: none;
-                color: #fff;
-                width: 38px;
-                height: 38px;
-                border-radius: 50%;
-                cursor: pointer;
-                font-size: 1.2rem;
-                transition: 0.2s;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-                .carrusel-controls button:hover {
-                    background: #2c5282;
-                    transform: scale(1.05);
-                }
-
-        .carrusel-track {
-            display: flex;
-            gap: 24px;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            padding: 12px 4px 20px;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-            /* ocultar scrollbar */
-            scrollbar-width: none;
-        }
-
-            .carrusel-track::-webkit-scrollbar {
-                display: none;
-            }
-
-        .tarjeta {
-            flex: 0 0 280px;
-            scroll-snap-align: start;
-            background: #fff;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
-            transition: 0.25s;
-            cursor: pointer;
-            border: 1px solid #eef2f6;
-        }
-
-            .tarjeta:hover {
-                transform: translateY(-6px);
-                box-shadow: 0 14px 32px rgba(0, 0, 0, 0.10);
-            }
-
-        .tarjeta-img {
-            height: 160px;
-            background: #d0dbe8;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: #3a5a7a;
-        }
-
-            .tarjeta-img img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-        .tarjeta-body {
-            padding: 18px 20px 22px;
-        }
-
-            .tarjeta-body h4 {
-                font-size: 1.1rem;
-                font-weight: 600;
-                margin-bottom: 6px;
-            }
-
-            .tarjeta-body p {
-                font-size: 0.9rem;
-                color: #475569;
-                line-height: 1.5;
-            }
-
-            .tarjeta-body .link-drive {
-                display: inline-block;
-                margin-top: 12px;
-                font-weight: 600;
-                color: #0b1a2e;
-                font-size: 0.9rem;
-                border-bottom: 2px solid transparent;
-                transition: 0.2s;
-            }
-
-                .tarjeta-body .link-drive:hover {
-                    border-bottom-color: #0b1a2e;
-                }
-
-        /* Botón "Ver más" extra */
-        .ver-mas-btn {
-            display: inline-block;
-            background: #0b1a2e;
-            color: #fff;
-            padding: 12px 32px;
-            border-radius: 40px;
-            font-weight: 600;
-            margin-top: 12px;
-            transition: 0.2s;
-            border: none;
-            cursor: pointer;
-            font-size: 0.95rem;
-        }
-
-            .ver-mas-btn:hover {
-                background: #2c5282;
-                transform: scale(1.02);
-            }
-
-        /* ---------- CONTACTO ---------- */
-        #contacto {
-            background: #0b1a2e;
-            color: #fff;
-            margin-top: 20px;
-            padding: 50px 0 40px;
-        }
-
-            #contacto .section-title {
-                color: #fff;
-            }
-
-                #contacto .section-title::after {
-                    background: #7aa9e0;
-                }
-
-        .contacto-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .contacto-info {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-            .contacto-info a {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                font-size: 1.05rem;
-                transition: 0.2s;
-            }
-
-                .contacto-info a:hover {
-                    color: #7aa9e0;
-                }
-
-            .contacto-info i {
-                width: 24px;
-                font-size: 1.3rem;
-            }
-
-        .contacto-redes {
-            display: flex;
-            gap: 20px;
-        }
-
-            .contacto-redes a {
-                font-size: 1.8rem;
-                transition: 0.2s;
-            }
-
-                .contacto-redes a:hover {
-                    color: #7aa9e0;
-                    transform: scale(1.1);
-                }
-
-        /* ---------- RESPONSIVE ---------- */
-        @media (max-width: 900px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .hero {
-                gap: 30px;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .hero-text p {
-                margin: 0 auto;
-            }
-
-            .experiencia-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .tarjeta {
-                flex: 0 0 230px;
-            }
-
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .container {
-                padding: 0 16px;
-            }
-
-            header {
-                padding: 0 16px;
-            }
-        }
-    </style>
 </head>
+
 <body>
 
-    <!-- ============ HEADER ============ -->
-    <header>
-        <div class="logo">Edgardo<span>Fajardo</span></div>
-        <nav class="nav-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#experiencia">Experiencia</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#certificados">Certificados</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-        <button class="hamburger" id="hamburgerBtn" aria-label="Menú">
-            <span></span><span></span><span></span>
-        </button>
-        <div class="dropdown-menu" id="dropdownMenu">
-            <a href="#inicio">Inicio</a>
-            <a href="#experiencia">Experiencia</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#certificados">Certificados</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#contacto">Contacto</a>
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <a href="#inicio" class="brand">
+                <div class="brand-name">
+                    Edgardo Fajardo
+                </div>
+
+                <div class="brand-role">
+                    Ingeniero Eléctrico Industrial
+                </div>
+            </a>
+
+
+            <button class="menu-toggle"
+                    id="menu-toggle"
+                    aria-label="Abrir menú"
+                    aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <nav class="nav-menu" id="nav-menu">
+
+                <a href="#inicio">Inicio</a>
+                <a href="#experiencia">Experiencia</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#certificaciones">Certificaciones</a>
+                <a href="#contacto">Contacto</a>
+                <div class="nav-language">
+
+                    <button class="nav-language-current"
+                            type="button"
+                            aria-label="Cambiar idioma">
+                        <span class="language-globe">
+                            <i data-lucide="globe"></i>
+                        </span>
+
+                        <span class="language-current-text">
+                            Español
+                        </span>
+                    </button>
+
+                    <div class="nav-language-dropdown">
+
+                        <a href="en/">
+                            English
+                        </a>
+
+                    </div>
+
+                </div>
+            </nav>
+
         </div>
+
     </header>
 
     <main>
-        <!-- ============ INICIO ============ -->
-        <section id="inicio">
-            <div class="container hero">
-                <div class="hero-foto">
-                    <!-- Coloca tu foto aquí. Reemplaza el src con la ruta de tu imagen -->
-                    <img src="https://via.placeholder.com/200x200/0b1a2e/fff?text=EF" alt="Edgardo Fajardo" />
+
+        <!-- =========================
+         HERO
+    ========================== -->
+        <section id="inicio" class="hero">
+
+            <div class="hero-background">
+
+                <div class="light-orb light-orb-1"></div>
+                <div class="light-orb light-orb-2"></div>
+                <div class="light-orb light-orb-3"></div>
+
+                <div class="circuit circuit-left">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+
+                    <span class="node node-1"></span>
+                    <span class="node node-2"></span>
+                    <span class="node node-3"></span>
+                    <span class="node node-4"></span>
                 </div>
-                <div class="hero-text">
-                    <h1>Edgardo Alfredo Fajardo Enamorado</h1>
-                    <div class="titulo">Ingeniero Eléctrico Industrial · Egresado UNAH</div>
-                    <p>
-                        Apasionado por el mantenimiento industrial, la automatización y el análisis de datos.
-                        Experiencia práctica en Cargill, manejo de SAP, Power BI, AutoCAD y programación PLC.
-                        Enfoque en mejora continua, eficiencia energética y trabajo colaborativo.
+
+                <div class="circuit circuit-right">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+
+                    <span class="node node-1"></span>
+                    <span class="node node-2"></span>
+                    <span class="node node-3"></span>
+                    <span class="node node-4"></span>
+                </div>
+
+
+                <div class="dot-field dot-field-1"></div>
+                <div class="dot-field dot-field-2"></div>
+
+            </div>
+
+
+            <div class="hero-container">
+
+                <div class="hero-content">
+
+                    <p class="hero-kicker">
+                        INGENIERÍA ELÉCTRICA INDUSTRIAL
+                    </p>
+
+                    <h1 id="hero-title">
+                        Ingeniería que conecta ideas con soluciones.
+                    </h1>
+
+                    <p class="hero-description">
+                        Ingeniero Eléctrico Industrial con experiencia práctica
+                        en mantenimiento industrial, automatización, control,
+                        análisis y desarrollo de proyectos de ingeniería.
+                    </p>
+
+                    <a href="sobre-mi/" class="hero-button">
+                        Sobre mí
+                    </a>
+
+                </div>
+
+
+                <div class="hero-image-container">
+
+                    <div class="image-glow"></div>
+
+                    <img src="img/EdgardoPerfil.png"
+                         alt="Edgardo Fajardo - Ingeniero Eléctrico Industrial"
+                         class="hero-image">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================================
+         EXPERIENCIA
+    ====================================================== -->
+
+        <section id="experiencia" class="section section-light experience-section">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+                    <span class="section-kicker">
+                        TRAYECTORIA PROFESIONAL
+                    </span>
+
+                    <h2>
+                        Experiencia
+                    </h2>
+                </div>
+
+
+                <article class="experience-card">
+
+                    <div class="experience-logo-container">
+
+                        <img src="img/cargill-logo.png"
+                             alt="Cargill"
+                             class="experience-logo">
+
+                    </div>
+
+
+                    <div class="experience-content">
+
+                        <p class="experience-company">
+                            Cargill Honduras
+                        </p>
+
+                        <h3>
+                            Práctica Profesional — Supervisor de Mantenimiento
+                        </h3>
+
+                        <p class="experience-date">
+                            Enero 2026 – Junio 2026
+                        </p>
+
+                        <p class="experience-description">
+                            Participación en la coordinación de actividades de
+                            mantenimiento industrial, seguimiento de órdenes de
+                            trabajo y actualización de información técnica,
+                            trabajando directamente dentro de un entorno industrial.
+                        </p>
+
+                        <a href="experiencia/"
+                           class="experience-link">
+                            Ver experiencia completa →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+         PROYECTOS
+    ====================================================== -->
+
+        <section id="proyectos" class="section section-dark projects-section">
+
+            <div class="section-container">
+
+                <div class="section-heading projects-heading">
+                    <span class="section-kicker">
+                        TRABAJO DESTACADO
+                    </span>
+
+                    <h2>
+                        Proyectos
+                    </h2>
+
+                    <p class="section-intro">
+                        Algunos de los proyectos técnicos y académicos que mejor
+                        representan mi experiencia en ingeniería, automatización,
+                        programación y diseño eléctrico.
                     </p>
                 </div>
-            </div>
-        </section>
 
-        <!-- ============ EXPERIENCIA ============ -->
-        <section id="experiencia">
-            <div class="container">
-                <h2 class="section-title">Experiencia</h2>
-                <div class="experiencia-grid">
-                    <div class="exp-item">
-                        <h3>Práctica Profesional – Supervisor de Mantenimiento</h3>
-                        <div class="empresa">Cargill · Ene 2026 – Jun 2026</div>
-                        <ul>
-                            <li>Coordinación diaria de mantenimiento con técnicos y contratistas.</li>
-                            <li>Gestión y seguimiento de órdenes de trabajo en SAP.</li>
-                            <li>Actualización de planes de mantenimiento preventivo.</li>
-                            <li>Análisis de datos operativos para identificar tendencias de falla.</li>
-                            <li>Participación en proyectos de expansión y mejora continua.</li>
-                        </ul>
-                    </div>
-                    <div class="exp-item">
-                        <h3>Formación complementaria</h3>
-                        <div class="empresa">Proyectos y certificaciones</div>
-                        <ul>
-                            <li>Diseño de instalaciones eléctricas BT/MT.</li>
-                            <li>Automatización con PLC (Ladder, SCL, LOGO!).</li>
-                            <li>Desarrollo de software de predicción de consumo eléctrico.</li>
-                            <li>Auditoría energética y eficiencia.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- ============ HABILIDADES ============ -->
-        <section id="habilidades">
-            <div class="container">
-                <h2 class="section-title">Habilidades</h2>
-                <div class="habilidades-grid">
-                    <span class="habilidad-tag"><i class="fas fa-cogs"></i> SAP</span>
-                    <span class="habilidad-tag"><i class="fas fa-chart-bar"></i> Power BI</span>
-                    <span class="habilidad-tag"><i class="fas fa-drafting-compass"></i> AutoCAD</span>
-                    <span class="habilidad-tag"><i class="fas fa-microchip"></i> PLC (Ladder, SCL)</span>
-                    <span class="habilidad-tag"><i class="fas fa-plug"></i> Instalaciones BT/MT</span>
-                    <span class="habilidad-tag"><i class="fas fa-tools"></i> Mantenimiento industrial</span>
-                    <span class="habilidad-tag"><i class="fas fa-file-code"></i> Python / C#</span>
-                    <span class="habilidad-tag"><i class="fas fa-robot"></i> Automatización</span>
-                    <span class="habilidad-tag"><i class="fas fa-bolt"></i> Eficiencia energética</span>
-                    <span class="habilidad-tag"><i class="fas fa-users"></i> Trabajo en equipo</span>
-                    <span class="habilidad-tag"><i class="fas fa-chart-line"></i> Análisis de datos</span>
-                    <span class="habilidad-tag"><i class="fas fa-project-diagram"></i> Gestión de proyectos</span>
-                </div>
-            </div>
-        </section>
+                <div class="projects-grid">
 
-        <!-- ============ CERTIFICADOS ============ -->
-        <section id="certificados">
-            <div class="container">
-                <h2 class="section-title">Certificados</h2>
+                    <!-- =====================================
+                     LVNETWORKSIM
+                ====================================== -->
 
-                <!-- Certificados INFOP -->
-                <div class="carrusel-wrapper">
-                    <div class="carrusel-header">
-                        <h3><i class="fas fa-certificate"></i> INFOP</h3>
-                        <div class="carrusel-controls">
-                            <button class="carrusel-prev" data-target="infop"><i class="fas fa-chevron-left"></i></button>
-                            <button class="carrusel-next" data-target="infop"><i class="fas fa-chevron-right"></i></button>
+                    <article class="project-card">
+
+                        <a href="proyectos/#lvnetworksim"
+                           class="project-image-link">
+                            <img src="img/lvnetworksim.png"
+                                 alt="LVNetworkSim"
+                                 class="project-image">
+                        </a>
+
+
+                        <div class="project-content">
+
+                            <p class="project-number">
+                                01
+                            </p>
+
+                            <h3>
+                                LVNetworkSim
+                            </h3>
+
+                            <p class="project-description">
+                                Software de análisis de redes de media y baja tensión
+                                para el cálculo y predicción de caídas de tensión y
+                                pérdidas de potencia en Honduras.
+                            </p>
+
+
+                            <div class="project-tags">
+
+                                <span>C#</span>
+                                <span>.NET</span>
+                                <span>WPF</span>
+                                <span>HTML</span>
+                                <span>JSON</span>
+
+                            </div>
+
+
+                            <a href="proyectos/#lvnetworksim"
+                               class="project-link">
+                                Ver proyecto →
+                            </a>
+
                         </div>
-                    </div>
-                    <div class="carrusel-track" id="track-infop">
-                        <!-- Las tarjetas se inyectarán desde JS -->
-                    </div>
-                    <a href="https://drive.google.com/drive/folders/ejemplo-infop" target="_blank" class="ver-mas-btn">Ver todos en Drive <i class="fas fa-arrow-right"></i></a>
-                </div>
 
-                <!-- Certificados Huawei -->
-                <div class="carrusel-wrapper">
-                    <div class="carrusel-header">
-                        <h3><i class="fas fa-cloud"></i> Huawei ICT Academy</h3>
-                        <div class="carrusel-controls">
-                            <button class="carrusel-prev" data-target="huawei"><i class="fas fa-chevron-left"></i></button>
-                            <button class="carrusel-next" data-target="huawei"><i class="fas fa-chevron-right"></i></button>
-                        </div>
-                    </div>
-                    <div class="carrusel-track" id="track-huawei"></div>
-                    <a href="https://drive.google.com/drive/folders/ejemplo-huawei" target="_blank" class="ver-mas-btn">Ver todos en Drive <i class="fas fa-arrow-right"></i></a>
-                </div>
+                    </article>
 
-                <!-- Certificados Importantes -->
-                <div class="carrusel-wrapper">
-                    <div class="carrusel-header">
-                        <h3><i class="fas fa-star"></i> Certificaciones destacadas</h3>
-                        <div class="carrusel-controls">
-                            <button class="carrusel-prev" data-target="importantes"><i class="fas fa-chevron-left"></i></button>
-                            <button class="carrusel-next" data-target="importantes"><i class="fas fa-chevron-right"></i></button>
-                        </div>
-                    </div>
-                    <div class="carrusel-track" id="track-importantes"></div>
-                    <a href="https://drive.google.com/drive/folders/ejemplo-importantes" target="_blank" class="ver-mas-btn">Ver todos en Drive <i class="fas fa-arrow-right"></i></a>
-                </div>
 
-                <!-- Otros (CIMEQH, etc.) -->
-                <div class="carrusel-wrapper">
-                    <div class="carrusel-header">
-                        <h3><i class="fas fa-graduation-cap"></i> Otros (CIMEQH, etc.)</h3>
-                        <div class="carrusel-controls">
-                            <button class="carrusel-prev" data-target="otros"><i class="fas fa-chevron-left"></i></button>
-                            <button class="carrusel-next" data-target="otros"><i class="fas fa-chevron-right"></i></button>
+                    <!-- =====================================
+                     AUTOMATIZACIÓN DE MEZCLADORAS
+                ====================================== -->
+
+                    <article class="project-card">
+
+                        <a href="proyectos/#automatizacion"
+                           class="project-image-link">
+                            <img src="img/automatizacion.png"
+                                 alt="Sistema de automatización de mezcladoras"
+                                 class="project-image">
+                        </a>
+
+
+                        <div class="project-content">
+
+                            <p class="project-number">
+                                02
+                            </p>
+
+                            <h3>
+                                Automatización de mezcladoras
+                            </h3>
+
+                            <p class="project-description">
+                                Prototipo académico funcional para automatizar el
+                                llenado y activación de mezcladoras mediante un sistema
+                                embebido y componentes electrónicos.
+                            </p>
+
+
+                            <div class="project-tags">
+
+                                <span>Python</span>
+                                <span>Sistema embebido</span>
+                                <span>Electrónica</span>
+                                <span>Automatización</span>
+                                <span>Impresión 3D</span>
+
+                            </div>
+
+
+                            <a href="proyectos/#automatizacion"
+                               class="project-link">
+                                Ver proyecto →
+                            </a>
+
                         </div>
-                    </div>
-                    <div class="carrusel-track" id="track-otros"></div>
-                    <a href="https://drive.google.com/drive/folders/ejemplo-otros" target="_blank" class="ver-mas-btn">Ver todos en Drive <i class="fas fa-arrow-right"></i></a>
+
+                    </article>
+
+
+                    <!-- =====================================
+                     DISEÑO INSTALACIÓN ELÉCTRICA
+                ====================================== -->
+
+                    <article class="project-card">
+
+                        <a href="proyectos/#instalacion-electrica"
+                           class="project-image-link">
+                            <img src="img/instalacion-electrica.png"
+                                 alt="Diseño de instalación eléctrica"
+                                 class="project-image">
+                        </a>
+
+
+                        <div class="project-content">
+
+                            <p class="project-number">
+                                03
+                            </p>
+
+                            <h3>
+                                Diseño de instalación eléctrica
+                            </h3>
+
+                            <p class="project-description">
+                                Diseño de la instalación eléctrica de iluminación y
+                                fuerza para una vivienda, incluyendo planos eléctricos,
+                                memoria de cálculo y estimación de costos.
+                            </p>
+
+
+                            <div class="project-tags">
+
+                                <span>AutoCAD</span>
+                                <span>Excel</span>
+                                <span>NFPA 70 (NEC)</span>
+                                <span>Diseño Eléctrico</span>
+
+                            </div>
+
+
+                            <a href="proyectos/#instalacion-electrica"
+                               class="project-link">
+                                Ver proyecto →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =====================================
+                     VER MÁS PROYECTOS
+                ====================================== -->
+
+                    <a href="proyectos/"
+                       class="projects-more-card">
+
+                        <div class="projects-more-icon">
+                            +
+                        </div>
+
+                        <h3>
+                            Ver más proyectos
+                        </h3>
+
+                        <p>
+                            Explora otros proyectos, trabajos académicos
+                            y desarrollos técnicos.
+                        </p>
+
+                        <span class="projects-more-link">
+                            Ir a proyectos →
+                        </span>
+
+                    </a>
+
                 </div>
 
             </div>
+
         </section>
 
-        <!-- ============ PROYECTOS ============ -->
-        <section id="proyectos">
-            <div class="container">
-                <h2 class="section-title">Proyectos</h2>
-                <div class="carrusel-wrapper">
-                    <div class="carrusel-header">
-                        <h3><i class="fas fa-laptop-code"></i> Proyectos destacados</h3>
-                        <div class="carrusel-controls">
-                            <button class="carrusel-prev" data-target="proyectos"><i class="fas fa-chevron-left"></i></button>
-                            <button class="carrusel-next" data-target="proyectos"><i class="fas fa-chevron-right"></i></button>
+        <!-- =====================================================
+         HABILIDADES
+    ====================================================== -->
+
+        <section id="habilidades" class="section section-light skills-section">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <span class="section-kicker">
+                        HERRAMIENTAS Y COMPETENCIAS
+                    </span>
+
+                    <h2>
+                        Habilidades
+                    </h2>
+
+                    <p class="section-intro skills-intro">
+                        Herramientas de ingeniería, automatización, programación,
+                        análisis y competencias profesionales utilizadas durante
+                        mi formación y desarrollo de proyectos.
+                    </p>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+
+                    <!-- ================================
+                     INGENIERÍA / CAD
+                ================================= -->
+
+                    <div class="skill-card skill-engineering">
+                        <div class="skill-icon">
+                            <img src="img/skills/AutoCAD.ico" alt="AutoCAD">
                         </div>
+                        <span>AutoCAD</span>
                     </div>
-                    <div class="carrusel-track" id="track-proyectos"></div>
-                    <a href="https://drive.google.com/drive/folders/ejemplo-proyectos" target="_blank" class="ver-mas-btn">Ver todos en Drive <i class="fas fa-arrow-right"></i></a>
+
+                    <div class="skill-card skill-engineering">
+                        <div class="skill-icon">
+                            <img src="img/skills/inventor.svg" alt="Inventor">
+                        </div>
+                        <span>Inventor</span>
+                    </div>
+
+                    <div class="skill-card skill-engineering">
+                        <div class="skill-icon">
+                            <img src="img/skills/revit.svg" alt="Revit">
+                        </div>
+                        <span>Revit</span>
+                    </div>
+
+                    <div class="skill-card skill-engineering">
+                        <div class="skill-icon">
+                            <img src="img/skills/ETAP.svg" alt="ETAP">
+                        </div>
+                        <span>ETAP</span>
+                    </div>
+
+                    <div class="skill-card skill-engineering">
+                        <div class="skill-icon">
+                            <img src="img/skills/PowerWorld.ico" alt="PowerWorld">
+                        </div>
+                        <span>PowerWorld</span>
+                    </div>
+
+                    <div class="skill-card skill-engineering">
+                        <div class="skill-icon">
+                            <img src="img/skills/SAM.png" alt="SAM">
+                        </div>
+                        <span>SAM</span>
+                    </div>
+
+
+                    <!-- ================================
+                     AUTOMATIZACIÓN Y CONTROL
+                ================================= -->
+
+                    <div class="skill-card skill-automation">
+                        <div class="skill-icon">
+                            <img src="img/skills/Schneider.svg" alt="Schneider Electric">
+                        </div>
+                        <span>Schneider Electric</span>
+                    </div>
+
+                    <div class="skill-card skill-automation">
+                        <div class="skill-icon">
+                            <img src="img/skills/ZelioSoft2.ico" alt="Zelio Soft">
+                        </div>
+                        <span>Zelio Soft</span>
+                    </div>
+
+                    <div class="skill-card skill-automation">
+                        <div class="skill-icon">
+                            <img src="img/skills/siemens.svg" alt="Siemens">
+                        </div>
+                        <span>Siemens</span>
+                    </div>
+
+                    <div class="skill-card skill-automation">
+                        <div class="skill-icon">
+                            <img src="img/skills/LOGOV8.ico" alt="LOGO! Soft">
+                        </div>
+                        <span>LOGO! Soft</span>
+                    </div>
+
+                    <div class="skill-card skill-automation">
+                        <div class="skill-icon">
+                            <img src="img/skills/TIAV16.ico" alt="TIA Portal">
+                        </div>
+                        <span>TIA Portal</span>
+                    </div>
+
+                    <div class="skill-card skill-automation">
+                        <div class="skill-icon">
+                            <img src="img/skills/CADESIMU.ico" alt="CADe SIMU">
+                        </div>
+                        <span>CADe SIMU</span>
+                    </div>
+
+
+                    <!-- ================================
+                     ELECTRÓNICA / SIMULACIÓN
+                ================================= -->
+
+                    <div class="skill-card skill-electronics">
+                        <div class="skill-icon">
+                            <img src="img/skills/Multisim.ico" alt="Multisim">
+                        </div>
+                        <span>Multisim</span>
+                    </div>
+
+                    <div class="skill-card skill-electronics">
+                        <div class="skill-icon">
+                            <img src="img/skills/Proteus.ico" alt="Proteus">
+                        </div>
+                        <span>Proteus</span>
+                    </div>
+
+
+                    <!-- ================================
+                     PROGRAMACIÓN
+                ================================= -->
+
+                    <div class="skill-card skill-programming">
+                        <div class="skill-icon">
+                            <img src="img/skills/Python.svg" alt="Python">
+                        </div>
+                        <span>Python</span>
+                    </div>
+
+                    <div class="skill-card skill-programming">
+                        <div class="skill-icon">
+                            <img src="img/skills/matlab.svg" alt="MATLAB">
+                        </div>
+                        <span>MATLAB</span>
+                    </div>
+
+                    <div class="skill-card skill-programming">
+                        <div class="skill-icon">
+                            <img src="img/skills/VisualStudio.ico" alt="Visual Studio">
+                        </div>
+                        <span>Visual Studio</span>
+                    </div>
+
+                    <div class="skill-card skill-programming">
+                        <div class="skill-icon">
+                            <img src="img/skills/wolfram.svg" alt="Wolfram">
+                        </div>
+                        <span>Wolfram</span>
+                    </div>
+
+
+                    <!-- ================================
+                     DATOS / GESTIÓN
+                ================================= -->
+
+                    <div class="skill-card skill-data">
+                        <div class="skill-icon">
+                            <img src="img/skills/Excel.svg" alt="Excel">
+                        </div>
+                        <span>Excel</span>
+                    </div>
+
+                    <div class="skill-card skill-data">
+                        <div class="skill-icon">
+                            <img src="img/skills/Power_BI.svg" alt="Power BI">
+                        </div>
+                        <span>Power BI</span>
+                    </div>
+
+                    <div class="skill-card skill-data">
+                        <div class="skill-icon">
+                            <img src="img/skills/SAP.svg" alt="SAP">
+                        </div>
+                        <span>SAP</span>
+                    </div>
+
+
+                    <!-- ================================
+                     COMPETENCIAS PROFESIONALES
+                ================================= -->
+
+                    <div class="skill-card skill-soft">
+                        <div class="skill-icon">
+                            <i data-lucide="badge-check"></i>
+                        </div>
+                        <span>Responsabilidad</span>
+                    </div>
+
+                    <div class="skill-card skill-soft">
+                        <div class="skill-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <span>Liderazgo</span>
+                    </div>
+
+                    <div class="skill-card skill-soft">
+                        <div class="skill-icon">
+                            <i data-lucide="handshake"></i>
+                        </div>
+                        <span>Trabajo en equipo</span>
+                    </div>
+
+                    <div class="skill-card skill-soft">
+                        <div class="skill-icon">
+                            <i data-lucide="lightbulb"></i>
+                        </div>
+                        <span>Resolución de problemas</span>
+                    </div>
+
+                    <div class="skill-card skill-soft">
+                        <div class="skill-icon">
+                            <i data-lucide="brain"></i>
+                        </div>
+                        <span>Pensamiento analítico</span>
+                    </div>
+
+                    <div class="skill-card skill-soft">
+                        <div class="skill-icon">
+                            <i data-lucide="refresh-cw"></i>
+                        </div>
+                        <span>Adaptabilidad</span>
+                    </div>
+
+                    <div class="skill-card skill-soft">
+                        <div class="skill-icon">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+                        <span>Aprendizaje continuo</span>
+                    </div>
+
+                    <div class="skill-card skill-soft">
+                        <div class="skill-icon">
+                            <i data-lucide="search-check"></i>
+                        </div>
+                        <span>Atención al detalle</span>
+                    </div>
+
+                    <div class="skill-card skill-soft">
+                        <div class="skill-icon">
+                            <i data-lucide="message-square"></i>
+                        </div>
+                        <span>Comunicación técnica</span>
+                    </div>
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- ============ CONTACTO ============ -->
-        <section id="contacto">
-            <div class="container">
-                <h2 class="section-title">Contacto</h2>
-                <div class="contacto-grid">
-                    <div class="contacto-info">
-                        <a href="tel:+50496253141"><i class="fas fa-phone-alt"></i> +504 9625-3141</a>
-                        <a href="mailto:edgardo03alfredo@gmail.com"><i class="fas fa-envelope"></i> edgardo03alfredo@gmail.com</a>
-                        <a href="#" target="_blank"><i class="fas fa-map-marker-alt"></i> San Pedro Sula, Honduras</a>
-                    </div>
-                    <div class="contacto-redes">
-                        <a href="https://linkedin.com/in/edgardo-fajardo" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
+        <!-- =====================================================
+         CERTIFICACIONES
+    ====================================================== -->
+
+        <section id="certificaciones" class="section section-dark certifications-section">
+
+            <div class="section-container">
+
+                <div class="section-heading certifications-heading">
+
+                    <span class="section-kicker">
+                        FORMACIÓN Y CERTIFICACIONES
+                    </span>
+
+                    <h2>
+                        Certificaciones
+                    </h2>
+
+                    <p class="section-intro">
+                        Una selección de certificaciones y capacitaciones que
+                        complementan mi formación en ingeniería, tecnología,
+                        seguridad y desarrollo profesional.
+                    </p>
+
                 </div>
-                <p style="margin-top: 30px; color: #94a3b8; font-size: 0.9rem; text-align: center;">
-                    &copy; 2026 Edgardo Fajardo · Portafolio profesional
-                </p>
+
+
+                <div class="certifications-grid">
+
+
+                    <!-- =================================================
+                     01. NFPA 70E
+                ================================================== -->
+
+                    <article class="certification-card">
+
+                        <a href="https://drive.google.com/file/d/17zNIBl-dJZozlRN5eRyR3YqF1JuL70OJ/view?usp=sharing"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="certification-image-link">
+
+                            <img src="img/certificaciones/titulo.png"
+                                 alt="Certificado NFPA 70E"
+                                 class="certification-image">
+
+                        </a>
+
+
+                        <div class="certification-content">
+
+                            <p class="certification-number">
+                                01
+                            </p>
+
+                            <h3>
+                                NFPA 70E
+                            </h3>
+
+                            <p class="certification-description">
+                                Fundamentos de la Norma NFPA 70E “Norma para la
+                                Seguridad Eléctrica en Lugares de Trabajo”.
+                            </p>
+
+
+                            <div class="certification-tags">
+
+                                <span>NFPA 70E</span>
+                                <span>Seguridad Eléctrica</span>
+                                <span>Cargill</span>
+                                <span>Grupo ABC Ingenieros</span>
+
+                            </div>
+
+
+                            <a href="https://drive.google.com/file/d/17zNIBl-dJZozlRN5eRyR3YqF1JuL70OJ/view?usp=sharing"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="certification-link">
+                                Ver certificado →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                     02. POWER BI
+                ================================================== -->
+
+                    <article class="certification-card">
+
+                        <a href="https://drive.google.com/file/d/1L0rGZCOx386nbvcb7GvymAhYSYedEKUr/view?usp=sharing"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="certification-image-link">
+
+                            <img src="img/certificaciones/titulo.png"
+                                 alt="Certificado Power BI"
+                                 class="certification-image">
+
+                        </a>
+
+
+                        <div class="certification-content">
+
+                            <p class="certification-number">
+                                02
+                            </p>
+
+                            <h3>
+                                Power BI
+                            </h3>
+
+                            <p class="certification-description">
+                                Reconocimiento por la dedicación y esfuerzo en el
+                                dominio de competencias clave de Microsoft Power BI.
+                            </p>
+
+
+                            <div class="certification-tags">
+
+                                <span>Power BI</span>
+                                <span>Análisis de Datos</span>
+                                <span>Microsoft</span>
+                                <span>Cargill</span>
+
+                            </div>
+
+
+                            <a href="https://drive.google.com/file/d/1L0rGZCOx386nbvcb7GvymAhYSYedEKUr/view?usp=sharing"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="certification-link">
+                                Ver certificado →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                     03. GESTIÓN ENERGÉTICA
+                ================================================== -->
+
+                    <article class="certification-card">
+
+                        <a href="https://drive.google.com/file/d/1BJiH4iqvgWG7SJ6h4vmr6ol8dZbFgR4I/view?usp=sharing"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="certification-image-link">
+
+                            <img src="img/certificaciones/titulo.png"
+                                 alt="Entrenamiento para analizar y decidir ante problemas técnicos reales"
+                                 class="certification-image">
+
+                        </a>
+
+
+                        <div class="certification-content">
+
+                            <p class="certification-number">
+                                03
+                            </p>
+
+                            <h3>
+                                Análisis de problemas técnicos reales
+                            </h3>
+
+                            <p class="certification-description">
+                                Laboratorio práctico basado en un caso real de
+                                gestión energética desarrollado en Canadá.
+                            </p>
+
+
+                            <div class="certification-tags">
+
+                                <span>Gestión Energética</span>
+                                <span>Análisis Técnico</span>
+                                <span>Eficiencia Energética</span>
+                                <span>Nova Gaia Kefas</span>
+
+                            </div>
+
+
+                            <a href="https://drive.google.com/file/d/1BJiH4iqvgWG7SJ6h4vmr6ol8dZbFgR4I/view?usp=sharing"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="certification-link">
+                                Ver certificado →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                     04. DISTRIBUCIÓN ELÉCTRICA
+                ================================================== -->
+
+                    <article class="certification-card">
+
+                        <a href="https://drive.google.com/file/d/1rEl2L9vdxwsBlSNqNRuDzPqsvNG5TyhI/view?usp=sharing"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="certification-image-link">
+
+                            <img src="img/certificaciones/titulo.png"
+                                 alt="Certificado de soluciones de distribución eléctrica"
+                                 class="certification-image">
+
+                        </a>
+
+
+                        <div class="certification-content">
+
+                            <p class="certification-number">
+                                04
+                            </p>
+
+                            <h3>
+                                Soluciones de Distribución Eléctrica
+                            </h3>
+
+                            <p class="certification-description">
+                                Capacitación sobre soluciones de distribución
+                                eléctrica para sistemas de baja y media tensión.
+                            </p>
+
+
+                            <div class="certification-tags">
+
+                                <span>Distribución Eléctrica</span>
+                                <span>Baja Tensión</span>
+                                <span>Media Tensión</span>
+                                <span>Schneider Electric</span>
+                                <span>CIMEQH</span>
+
+                            </div>
+
+
+                            <a href="https://drive.google.com/file/d/1rEl2L9vdxwsBlSNqNRuDzPqsvNG5TyhI/view?usp=sharing"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="certification-link">
+                                Ver certificado →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                     05. FORMULACIÓN DE PROYECTOS
+                ================================================== -->
+
+                    <article class="certification-card">
+
+                        <a href="https://drive.google.com/file/d/1LFweW9pIr3qq0_PdlY7Jr6U7VCPgZz0u/view?usp=sharing"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="certification-image-link">
+
+                            <img src="img/certificaciones/titulo.png"
+                                 alt="Certificado de formulación y evaluación de proyectos de inversión"
+                                 class="certification-image">
+
+                        </a>
+
+
+                        <div class="certification-content">
+
+                            <p class="certification-number">
+                                05
+                            </p>
+
+                            <h3>
+                                Formulación y Evaluación de Proyectos
+                            </h3>
+
+                            <p class="certification-description">
+                                Curso a distancia enfocado en la formulación y
+                                evaluación de proyectos de inversión.
+                            </p>
+
+
+                            <div class="certification-tags">
+
+                                <span>Gestión de Proyectos</span>
+                                <span>Evaluación de Proyectos</span>
+                                <span>INFOP</span>
+
+                            </div>
+
+
+                            <a href="https://drive.google.com/file/d/1LFweW9pIr3qq0_PdlY7Jr6U7VCPgZz0u/view?usp=sharing"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="certification-link">
+                                Ver certificado →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                     06. LIDERAZGO
+                ================================================== -->
+
+                    <article class="certification-card">
+
+                        <a href="https://drive.google.com/file/d/1BwN3TVcDDZSbpsn5MgDn0jMq1ffAhbvt/view?usp=sharing"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="certification-image-link">
+
+                            <img src="img/certificaciones/titulo.png"
+                                 alt="Certificado de Autoridad, dirección y liderazgo"
+                                 class="certification-image">
+
+                        </a>
+
+
+                        <div class="certification-content">
+
+                            <p class="certification-number">
+                                06
+                            </p>
+
+                            <h3>
+                                Autoridad, Dirección y Liderazgo
+                            </h3>
+
+                            <p class="certification-description">
+                                Curso en línea autorizado por la Universidad Nacional
+                                Autónoma de México y ofrecido a través de Coursera.
+                            </p>
+
+
+                            <div class="certification-tags">
+
+                                <span>Liderazgo</span>
+                                <span>Gestión</span>
+                                <span>UNAM</span>
+                                <span>Coursera</span>
+
+                            </div>
+
+
+                            <a href="https://drive.google.com/file/d/1BwN3TVcDDZSbpsn5MgDn0jMq1ffAhbvt/view?usp=sharing"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="certification-link">
+                                Ver certificado →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- =================================================
+                 ACCESO A TODOS LOS CERTIFICADOS
+            ================================================== -->
+
+                <div class="certifications-more">
+
+                    <p>
+                        Más de 30 certificaciones y cursos complementarios.
+                    </p>
+
+                    <a href="certificaciones/"
+                       class="certifications-more-button">
+                        Ver todas las certificaciones →
+                    </a>
+
+                </div>
+
             </div>
+
         </section>
+
+        <footer id="contacto" class="site-footer">
+
+            <div class="footer-container">
+
+
+                <!-- =================================================
+             MENÚ DEL SITIO
+        ================================================== -->
+
+                <div class="footer-navigation">
+
+                    <span class="footer-kicker">
+                        MENÚ DEL SITIO
+                    </span>
+
+                    <nav class="footer-menu">
+
+                        <a href="#inicio">
+                            Inicio
+                        </a>
+
+                        <a href="sobre-mi/">
+                            Sobre mí
+                        </a>
+
+                        <a href="proyectos/">
+                            Proyectos
+                        </a>
+
+                        <a href="experiencia/">
+                            Experiencia
+                        </a>
+
+                        <a href="certificaciones/">
+                            Certificaciones
+                        </a>
+
+                    </nav>
+
+
+                    <!-- Selector de idioma -->
+
+                    <div class="footer-language">
+
+                        <span class="language-globe">
+                            <i data-lucide="globe"></i>
+                        </span>
+
+                        <a href="#"
+                           class="footer-language-active">
+                            Español
+                        </a>
+
+                        <span class="footer-language-divider">
+                            |
+                        </span>
+
+                        <a href="en/"
+                           class="footer-language-link">
+                            English
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+             CONTACTO
+        ================================================== -->
+
+                <div class="footer-contact">
+
+                    <span class="footer-kicker">
+                        CONTACTO
+                    </span>
+
+                    <p class="footer-message">
+                        ¿Tienes una oportunidad profesional o quieres hablar
+                        sobre un proyecto? Escríbeme.
+                    </p>
+
+
+                    <div class="contact-list">
+
+                        <a href="https://api.whatsapp.com/send?phone=50496253141"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="contact-item">
+                            <span class="contact-icon">
+                                <i data-lucide="phone"></i>
+                            </span>
+
+                            <span>
+                                +504 9625-3141
+                            </span>
+                        </a>
+
+
+                        <button type="button"
+                                class="contact-item contact-email"
+                                id="copy-email">
+                            <span class="contact-icon">
+                                <i data-lucide="mail"></i>
+                            </span>
+
+                            <span class="contact-email-text">
+                                edgardo03alfredo@gmail.com
+                            </span>
+                        </button>
+
+
+
+
+                        <a href="https://www.linkedin.com/in/edgardo-alfredo-fajardo-enamorado-88b56b1a7"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="contact-item">
+                            <span class="contact-icon">
+                                <img src="img/skills/LinkedIn_icon.svg"
+                                     alt="LinkedIn">
+                            </span>
+
+                            <span>
+                                www.linkedin.com/in/edgardo-alfredo-fajardo-enamorado-88b56b1a7
+                            </span>
+                        </a>
+
+                    </div>
+                    <p class="copy-feedback"
+                       id="copy-feedback"
+                       aria-live="polite"></p>
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <div class="footer-bottom-container">
+
+                    <p>
+                        © 2026 Edgardo Fajardo.
+                    </p>
+
+                    <p>
+                        Ingeniero Eléctrico Industrial
+                    </p>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+
     </main>
 
-    <script>
-    // ================================================================
-    //  DATOS (certificados y proyectos)
-    //  Cada elemento: { titulo, descripcion, enlace, imagen (opcional) }
-    //  Usamos emojis o iconos como placeholder visual
-    // ================================================================
 
-    const data = {
-      infop: [
-        { titulo: 'Administración de Mantenimiento', descripcion: 'Gestión de activos y planes de mantenimiento.', enlace: 'https://drive.google.com/file/d/ejemplo1' },
-        { titulo: 'Liderazgo', descripcion: 'Habilidades directivas y trabajo en equipo.', enlace: 'https://drive.google.com/file/d/ejemplo2' },
-        { titulo: 'Gestión del Talento Humano', descripcion: 'Reclutamiento, desarrollo y retención.', enlace: 'https://drive.google.com/file/d/ejemplo3' },
-        { titulo: 'Motivación al Trabajo', descripcion: 'Estrategias para entornos productivos.', enlace: 'https://drive.google.com/file/d/ejemplo4' },
-        { titulo: 'Oratoria', descripcion: 'Comunicación efectiva y presentaciones.', enlace: 'https://drive.google.com/file/d/ejemplo5' },
-        { titulo: 'Formulación de Proyectos', descripcion: 'Evaluación y gestión de inversiones.', enlace: 'https://drive.google.com/file/d/ejemplo6' }
-      ],
-      huawei: [
-        { titulo: 'Redes de Computadoras', descripcion: 'Fundamentos de redes y protocolos.', enlace: 'https://drive.google.com/file/d/ejemplo7' },
-        { titulo: 'Tecnologías 5G', descripcion: 'Arquitectura y aplicaciones 5G.', enlace: 'https://drive.google.com/file/d/ejemplo8' },
-        { titulo: 'Computación en la Nube', descripcion: 'Servicios cloud y despliegue.', enlace: 'https://drive.google.com/file/d/ejemplo9' },
-        { titulo: 'Inteligencia Artificial', descripcion: 'Fundamentos de IA y machine learning.', enlace: 'https://drive.google.com/file/d/ejemplo10' },
-        { titulo: 'Ciberseguridad', descripcion: 'Seguridad en redes y sistemas.', enlace: 'https://drive.google.com/file/d/ejemplo11' }
-      ],
-      importantes: [
-        { titulo: 'NFPA 70E – Seguridad Eléctrica', descripcion: 'Norma para seguridad en lugares de trabajo.', enlace: 'https://drive.google.com/file/d/ejemplo12' },
-        { titulo: 'Power BI Certification', descripcion: 'Análisis de datos y visualización.', enlace: 'https://drive.google.com/file/d/ejemplo13' },
-        { titulo: 'Auditoría Energética', descripcion: 'Eficiencia y diagnóstico energético.', enlace: 'https://drive.google.com/file/d/ejemplo14' },
-        { titulo: 'Autoridad, Dirección y Liderazgo', descripcion: 'Curso Coursera – Habilidades directivas.', enlace: 'https://drive.google.com/file/d/ejemplo15' }
-      ],
-      otros: [
-        { titulo: 'Análisis de Emisiones', descripcion: 'Fuentes fijas y móviles – CIMEQH.', enlace: 'https://drive.google.com/file/d/ejemplo16' },
-        { titulo: 'Supresores de Transientes', descripcion: 'Protección contra sobretensiones.', enlace: 'https://drive.google.com/file/d/ejemplo17' },
-        { titulo: 'Soluciones de Distribución', descripcion: 'BT y MT – CIMEQH.', enlace: 'https://drive.google.com/file/d/ejemplo18' }
-      ],
-      proyectos: [
-        { titulo: 'LVNetworkSim', descripcion: 'Simulación de redes BT – tesis.', enlace: 'https://drive.google.com/file/d/ejemplo19' },
-        { titulo: 'Instalación Eléctrica', descripcion: 'Diseño completo con memoria de cálculo.', enlace: 'https://drive.google.com/file/d/ejemplo20' },
-        { titulo: 'Automatización de Mezcladoras', descripcion: 'Control con PLC e impresión 3D.', enlace: 'https://drive.google.com/file/d/ejemplo21' },
-        { titulo: 'Software de Predicción', descripcion: 'Cálculo de pérdidas y proyección 15 años.', enlace: 'https://drive.google.com/file/d/ejemplo22' },
-        { titulo: 'Paper de Automatización', descripcion: 'Optimización de procesos industriales.', enlace: 'https://drive.google.com/file/d/ejemplo23' }
-      ]
-    };
-
-    // Colores para imágenes placeholder (iconos)
-    const iconMap = {
-      infop: 'fa-briefcase',
-      huawei: 'fa-cloud',
-      importantes: 'fa-award',
-      otros: 'fa-book',
-      proyectos: 'fa-flask'
-    };
-
-    // Renderizar tarjetas en cada track
-    function renderCards(trackId, items, iconClass) {
-      const track = document.getElementById(trackId);
-      if (!track) return;
-      track.innerHTML = '';
-      items.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'tarjeta';
-        // Al hacer clic en la tarjeta, abre el enlace
-        card.addEventListener('click', () => {
-          if (item.enlace) window.open(item.enlace, '_blank');
-        });
-        // Estructura
-        card.innerHTML = `
-          <div class="tarjeta-img" style="background: #e2e8f0; color: #1e293b;">
-            <i class="fas ${iconClass} fa-3x" style="opacity:0.5;"></i>
-          </div>
-          <div class="tarjeta-body">
-            <h4>${item.titulo}</h4>
-            <p>${item.descripcion}</p>
-            <span class="link-drive">Ver en Drive →</span>
-          </div>
-        `;
-        track.appendChild(card);
-      });
-    }
-
-    // Inicializar todos los tracks
-    renderCards('track-infop', data.infop, iconMap.infop);
-    renderCards('track-huawei', data.huawei, iconMap.huawei);
-    renderCards('track-importantes', data.importantes, iconMap.importantes);
-    renderCards('track-otros', data.otros, iconMap.otros);
-    renderCards('track-proyectos', data.proyectos, iconMap.proyectos);
-
-    // ================================================================
-    //  FUNCIONALIDAD CARRUSEL (scroll con botones)
-    // ================================================================
-    document.querySelectorAll('.carrusel-track').forEach(track => {
-      // cada track tiene su propio contenedor de botones asociado por data-target
-      const wrapper = track.closest('.carrusel-wrapper');
-      const prevBtn = wrapper.querySelector('.carrusel-prev');
-      const nextBtn = wrapper.querySelector('.carrusel-next');
-
-      if (prevBtn && nextBtn) {
-        prevBtn.addEventListener('click', () => {
-          track.scrollBy({ left: -300, behavior: 'smooth' });
-        });
-        nextBtn.addEventListener('click', () => {
-          track.scrollBy({ left: 300, behavior: 'smooth' });
-        });
-      }
-    });
-
-    // ================================================================
-    //  MENÚ HAMBURGUESA
-    // ================================================================
-    const hamburger = document.getElementById('hamburgerBtn');
-    const dropdown = document.getElementById('dropdownMenu');
-
-    hamburger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      dropdown.classList.toggle('open');
-    });
-
-    // Cerrar dropdown al hacer clic fuera
-    document.addEventListener('click', (e) => {
-      if (!dropdown.contains(e.target) && e.target !== hamburger) {
-        dropdown.classList.remove('open');
-      }
-    });
-
-    // Cerrar dropdown al seleccionar un enlace
-    dropdown.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        dropdown.classList.remove('open');
-      });
-    });
-
-    // Ajuste de offset para anclas (header fijo)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href === '#') return;
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-          const offset = 80;
-          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-          window.scrollTo({ top, behavior: 'smooth' });
-        }
-      });
-    });
-    </script>
+    <script src="js/main.js"></script>
 
 </body>
+
 </html>
