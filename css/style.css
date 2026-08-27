@@ -2935,3 +2935,418 @@ button {
             max-height: 280px;
         }
 }
+/* =========================================================
+   81. EXPERIENCIA PROFESIONAL - PÁGINA
+   ========================================================= */
+
+.experience-page {
+    overflow: hidden;
+}
+
+.experience-entry {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   82. PARTE CLARA
+   ========================================================= */
+
+.experience-hero {
+    padding-top: 145px;
+    padding-bottom: 75px;
+}
+
+.experience-detail.section-light {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+
+/* =========================================================
+   83. PARTE OSCURA
+   ========================================================= */
+
+.experience-dark-zone {
+    background: #091412;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+    .experience-dark-zone .experience-detail {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+
+/* =========================================================
+   84. CONTENEDOR
+   ========================================================= */
+
+.experience-page-container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.experience-page-reverse {
+    grid-template-columns: 0.8fr 1fr;
+}
+
+    .experience-page-reverse
+    .experience-detail-text {
+        order: 2;
+    }
+
+    .experience-page-reverse
+    .experience-detail-image {
+        order: 1;
+    }
+
+
+/* =========================================================
+   85. ENCABEZADO
+   ========================================================= */
+
+.experience-intro h1 {
+    margin-bottom: 8px;
+    color: #172126;
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+}
+
+.experience-intro h2 {
+    margin-bottom: 12px;
+    color: #344346;
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+    line-height: 1.35;
+    font-weight: 600;
+}
+
+.experience-location {
+    margin-bottom: 22px;
+    color: #0b8c64;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.experience-intro > p:last-child {
+    max-width: 650px;
+    color: #536164;
+    font-size: 0.98rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   86. IMAGEN PRINCIPAL
+   ========================================================= */
+
+.experience-page-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .experience-page-image img {
+        width: 100%;
+        max-width: 470px;
+        max-height: 400px;
+        display: block;
+        object-fit: contain;
+    }
+
+
+/* =========================================================
+   87. TEXTO DE LOS BLOQUES
+   ========================================================= */
+
+.experience-detail-text h2 {
+    max-width: 620px;
+    margin-bottom: 21px;
+    color: #172126;
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+}
+
+.experience-detail-text p {
+    max-width: 650px;
+    margin-bottom: 17px;
+    color: #536164;
+    font-size: 0.96rem;
+    line-height: 1.75;
+}
+
+
+/* ---------- Texto en sección oscura ---------- */
+
+.experience-dark-zone
+.experience-detail-text h2 {
+    color: #ffffff;
+}
+
+.experience-dark-zone
+.experience-detail-text p {
+    color: #aebbb7;
+}
+
+
+/* =========================================================
+   88. IMÁGENES DE LOS BLOQUES
+   ========================================================= */
+
+.experience-detail-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .experience-detail-image img {
+        width: 100%;
+        max-width: 460px;
+        max-height: 360px;
+        display: block;
+        object-fit: contain;
+    }
+
+
+/* =========================================================
+   89. HERRAMIENTAS
+   ========================================================= */
+
+.experience-tools {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+    .experience-tools
+    .experience-page-container {
+        grid-template-columns: 0.8fr 1.2fr;
+        align-items: center;
+    }
+
+.experience-tools-content h2 {
+    margin-bottom: 14px;
+    color: #ffffff;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.15;
+}
+
+.experience-tools-content p {
+    max-width: 470px;
+    color: #9eaeaa;
+    font-size: 0.93rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   90. GRID DE HERRAMIENTAS
+   ========================================================= */
+
+.experience-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(11, 140, 100, 0.30);
+    border-left: 1px solid rgba(11, 140, 100, 0.30);
+}
+
+.experience-tool-card {
+    min-width: 0;
+    min-height: 95px;
+    padding: 11px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-align: center;
+    background: rgba(11, 140, 100, 0.045);
+    border-right: 1px solid rgba(11, 140, 100, 0.30);
+    border-bottom: 1px solid rgba(11, 140, 100, 0.30);
+    transition: background 0.2s ease;
+}
+
+    .experience-tool-card:hover {
+        background: rgba(11, 140, 100, 0.10);
+    }
+
+
+/* ---------- Iconos ---------- */
+
+.experience-tool-icon {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+    .experience-tool-icon img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+    }
+
+.experience-tool-card > span {
+    max-width: 100%;
+    color: #c2cfcb;
+    font-size: 0.62rem;
+    font-weight: 600;
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+}
+
+.tool-placeholder {
+    color: #0b8c64;
+    border: 1px solid rgba(11, 140, 100, 0.40);
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   91. CIERRE
+   ========================================================= */
+
+.experience-entry-bottom {
+    padding: 55px 20px 65px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+    .experience-entry-bottom p {
+        max-width: 750px;
+        margin: 0 auto;
+        color: #9eaeaa;
+        font-size: 0.94rem;
+        line-height: 1.7;
+    }
+
+
+/* =========================================================
+   92. RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .experience-hero {
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .experience-page-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .experience-page-reverse {
+        grid-template-columns: 1fr;
+    }
+
+        .experience-page-reverse
+        .experience-detail-text,
+        .experience-page-reverse
+        .experience-detail-image {
+            order: initial;
+        }
+
+    .experience-page-image {
+        order: 2;
+    }
+
+        .experience-page-image img,
+        .experience-detail-image img {
+            max-height: 330px;
+        }
+
+    .experience-detail.section-light,
+    .experience-dark-zone .experience-detail {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .experience-tools {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .experience-tools-grid {
+        margin-top: 10px;
+    }
+}
+
+
+/* =========================================================
+   93. RESPONSIVE - MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .experience-page-container {
+        width: 88%;
+    }
+
+    .experience-intro h1 {
+        font-size: 2.2rem;
+    }
+
+    .experience-intro h2 {
+        font-size: 1.15rem;
+    }
+
+    .experience-intro > p:last-child,
+    .experience-detail-text p,
+    .experience-tools-content p {
+        font-size: 0.91rem;
+        line-height: 1.68;
+    }
+
+    .experience-detail.section-light,
+    .experience-dark-zone .experience-detail {
+        padding-top: 52px;
+        padding-bottom: 52px;
+    }
+
+    .experience-detail-text h2,
+    .experience-tools-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .experience-page-image img,
+    .experience-detail-image img {
+        max-height: 270px;
+    }
+
+    .experience-tools {
+        padding-top: 52px;
+        padding-bottom: 52px;
+    }
+
+        .experience-tools
+        .experience-page-container {
+            grid-template-columns: 1fr;
+        }
+
+    .experience-tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .experience-tool-card {
+        min-height: 90px;
+    }
+
+    .experience-entry-bottom {
+        padding: 45px 20px 55px;
+    }
+}
