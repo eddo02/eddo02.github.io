@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
 
             imagen:
-                "/img/certificados/titulo.png",
+                "/img/certificados/NFPA-70E.png",
 
             tags: [
                 {

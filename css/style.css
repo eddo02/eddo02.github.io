@@ -3350,3 +3350,339 @@ button {
         padding: 45px 20px 55px;
     }
 }
+/* =========================================================
+   94. PÁGINA DE PROYECTOS
+   ========================================================= */
+
+.projects-page {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   95. ENCABEZADO
+   ========================================================= */
+
+.projects-page-header {
+    padding-top: 115px;
+    padding-bottom: 35px;
+}
+
+.projects-page-container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+
+.projects-page-header p {
+    max-width: 720px;
+    color: #536164;
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   96. PROYECTO INDIVIDUAL
+   ========================================================= */
+
+.project-detail {
+    overflow: hidden;
+}
+
+.project-detail-light {
+    padding: 40px 0;
+    background: #f3f6f5;
+    color: #172126;
+}
+
+.project-detail-dark {
+    padding: 40px 0;
+    background: radial-gradient( circle at 75% 30%, rgba(11, 140, 100, 0.07), transparent 35% ), #091412;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   97. ENCABEZADO DEL PROYECTO
+   ========================================================= */
+
+.project-detail-heading {
+    margin-bottom: 42px;
+}
+
+.project-detail-number {
+    display: block;
+    margin-bottom: 7px;
+    color: #0b8c64;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.project-detail-heading h2 {
+    margin-bottom: 10px;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.project-detail-light
+.project-detail-heading h2 {
+    color: #172126;
+}
+
+.project-detail-dark
+.project-detail-heading h2 {
+    color: #ffffff;
+}
+
+.project-detail-subtitle {
+    max-width: 720px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.project-detail-light
+.project-detail-subtitle {
+    color: #617074;
+}
+
+.project-detail-dark
+.project-detail-subtitle {
+    color: #9eaeaa;
+}
+
+
+/* =========================================================
+   98. CONTENIDO
+   ========================================================= */
+
+.project-detail-container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+.project-detail-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.project-detail-reverse {
+    grid-template-columns: 1fr 0.95fr;
+}
+
+
+/* =========================================================
+   99. IMÁGENES
+   ========================================================= */
+
+.project-detail-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .project-detail-image img {
+        width: 100%;
+        max-width: 510px;
+        max-height: 430px;
+        display: block;
+        object-fit: contain;
+    }
+
+
+/* =========================================================
+   100. CONTENIDO TEXTUAL
+   ========================================================= */
+
+.project-detail-content h3 {
+    margin-bottom: 10px;
+    color: #0b8c64;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.project-detail-content p {
+    max-width: 650px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+.project-detail-light
+.project-detail-content p {
+    color: #536164;
+}
+
+.project-detail-dark
+.project-detail-content p {
+    color: #aebbb7;
+}
+
+
+/* =========================================================
+   101. TECNOLOGÍAS
+   ========================================================= */
+
+.project-detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 4px;
+    margin-bottom: 27px;
+}
+
+    .project-detail-tags span {
+        padding: 6px 9px;
+        border-radius: 999px;
+        font-size: 0.68rem;
+        line-height: 1.1;
+    }
+
+.project-detail-light
+.project-detail-tags span {
+    color: #27584b;
+    background: #e0f1ec;
+    border: 1px solid #75b5a1;
+}
+
+.project-detail-dark
+.project-detail-tags span {
+    color: #a9c8bd;
+    background: rgba(11, 140, 100, 0.07);
+    border: 1px solid rgba(11, 140, 100, 0.30);
+}
+
+
+/* =========================================================
+   102. ENLACES
+   ========================================================= */
+
+.project-detail-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+}
+
+.project-detail-link {
+    display: inline-block;
+    color: #0b8c64;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+    .project-detail-link:hover {
+        color: #11a875;
+        transform: translateX(3px);
+    }
+
+
+/* =========================================================
+   103. RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .projects-page-header {
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .project-detail-light,
+    .project-detail-dark {
+        padding: 60px 0;
+    }
+
+    .project-detail-grid,
+    .project-detail-reverse {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .project-detail-image {
+        order: -1;
+    }
+
+    .project-detail-reverse
+    .project-detail-image {
+        order: -1;
+    }
+
+    .project-detail-reverse
+    .project-detail-content {
+        order: 2;
+    }
+
+    .project-detail-image img {
+        max-height: 350px;
+    }
+}
+
+
+/* =========================================================
+   104. MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .projects-page-container,
+    .project-detail-container {
+        width: 88%;
+    }
+
+    .projects-page-header {
+        padding-top: 105px;
+        padding-bottom: 50px;
+    }
+
+        .projects-page-header h1 {
+            font-size: 2.15rem;
+        }
+
+    .project-detail-light,
+    .project-detail-dark {
+        padding: 52px 0;
+    }
+
+    .project-detail-heading {
+        margin-bottom: 30px;
+    }
+
+        .project-detail-heading h2 {
+            font-size: 2rem;
+        }
+
+    .project-detail-subtitle {
+        font-size: 0.91rem;
+    }
+
+    .project-detail-content p {
+        font-size: 0.91rem;
+        line-height: 1.68;
+    }
+
+    .project-detail-image img {
+        max-height: 280px;
+    }
+
+    .project-detail-tags {
+        gap: 5px;
+    }
+
+        .project-detail-tags span {
+            padding: 5px 7px;
+            font-size: 0.63rem;
+        }
+
+    .project-detail-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 9px;
+    }
+}
